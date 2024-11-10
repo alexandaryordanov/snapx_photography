@@ -4,57 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/snapxPhotography.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/videos/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/videos/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/videos/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/videos/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/videos/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/videos/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/videos/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/wsgi.py" afterDir="false" />
-    </list>
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +16,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "alexandaryordanov"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/alexandaryordanov/snapx_photography.git",
+    "accountId": "400f0f95-9950-4c4a-88f9-4c6bfa7928c3"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
 }]]></component>
@@ -139,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731230568768</updated>
-      <workItem from="1731230569784" duration="856000" />
+      <workItem from="1731230569784" duration="1481000" />
     </task>
     <servers />
   </component>
