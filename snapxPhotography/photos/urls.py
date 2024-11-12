@@ -1,8 +1,6 @@
 from django.urls import path, include
 from snapxPhotography.photos import views
 
-
-
 urlpatterns = [
     path('add/', views.PhotoAddPageView.as_view(), name='photo-add'),
     path('<int:pk>/', include([

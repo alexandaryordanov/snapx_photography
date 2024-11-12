@@ -4,34 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: added html and css files">
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/vendor/swiper/swiper-bundle.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: create urls and empty views">
+      <change afterPath="$PROJECT_DIR$/static/css/404.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/accounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/account-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contests/contest-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/contest-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contests/contests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/contests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,13 +100,14 @@
         <env name="DJANGO_SETTINGS_MODULE" value="snapxPhotography.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (snapxPhotography)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="localhost" />
+      <option name="host" value="0.0.0.0" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
@@ -154,7 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731230568768</updated>
       <workItem from="1731230569784" duration="11912000" />
-      <workItem from="1731414844234" duration="4118000" />
+      <workItem from="1731414844234" duration="7008000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -164,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731232613381</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update: create urls and empty views">
+      <option name="closed" value="true" />
+      <created>1731427415332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731427415332</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +162,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First idea&#10;&#10;This is my first idea for my project." />
     <MESSAGE value="Update: added html and css files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: added html and css files" />
+    <MESSAGE value="Update: create urls and empty views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: create urls and empty views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
