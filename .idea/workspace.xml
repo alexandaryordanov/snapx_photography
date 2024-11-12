@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: added html and css files" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: added html and css files">
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendor/swiper/swiper-bundle.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/videos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/accounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/account-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contests/contest-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/contest-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contests/contests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/contests.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,27 +45,28 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "alexandaryordanov"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alexandaryordanov&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/alexandaryordanov/snapx_photography.git",
-    "accountId": "400f0f95-9950-4c4a-88f9-4c6bfa7928c3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alexandaryordanov/snapx_photography.git&quot;,
+    &quot;accountId&quot;: &quot;400f0f95-9950-4c4a-88f9-4c6bfa7928c3&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2oeWYUGDnYJTyWjMF2mlFGTZfGI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -46,34 +75,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/softuni/python_web/snapx_photography/snapxPhotography",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.snapxPhotography.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/softuni/python_web/snapx_photography/snapxPhotography/snapxPhotography/videos&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\videos" />
+      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\photos" />
+      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\contests" />
+      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\common" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates\categories" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates\contests" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates\common" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates\accounts" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates" />
-      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography" />
     </key>
   </component>
   <component name="RunManager">
@@ -84,6 +118,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="snapxPhotography.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -118,7 +153,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731230568768</updated>
-      <workItem from="1731230569784" duration="1872000" />
+      <workItem from="1731230569784" duration="11912000" />
+      <workItem from="1731414844234" duration="4118000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -139,5 +175,16 @@
     <MESSAGE value="First idea&#10;&#10;This is my first idea for my project." />
     <MESSAGE value="Update: added html and css files" />
     <option name="LAST_COMMIT_MESSAGE" value="Update: added html and css files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/snapxPhotography/categories/urls.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
