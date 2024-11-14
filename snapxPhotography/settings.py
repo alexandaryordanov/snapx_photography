@@ -11,10 +11,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -26,7 +28,6 @@ SECRET_KEY = 'django-insecure-+z#i9-9vmnsr8j*@+nl_0ok4&*@cl3^_o=898p+8ndtqj1743@
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -41,7 +42,9 @@ INSTALLED_APPS = [
     "snapxPhotography.photos.apps.PhotosConfig",
     "snapxPhotography.categories.apps.VideosConfig",
     "snapxPhotography.contests.apps.ContestsConfig",
-    "snapxPhotography.common.apps.CommonConfig"
+    "snapxPhotography.common.apps.CommonConfig",
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -75,7 +78,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'snapxPhotography.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
@@ -85,7 +87,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -105,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -117,7 +117,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -127,7 +126,20 @@ STATICFILES_DIRS = (
     BASE_DIR / 'static',
 )
 
+# URL for serving media files
+MEDIA_URL = 'media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Cloudinary settings
+cloudinary.config(
+    cloud_name='dpocx6jy5',  # Replace with your Cloudinary Cloud Name
+    api_key='226795364682944',  # Replace with your API Key
+    api_secret='K7Cz_xNG76vpbrtt5yPGOwsKhpo'  # Replace with your API Secret
+)
+
+# Use Cloudinary for storing media files
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
