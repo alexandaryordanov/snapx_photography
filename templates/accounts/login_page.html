@@ -1,0 +1,28 @@
+{% extends 'common/base.html' %}
+
+
+{% block content %}
+    <!-- Username & Password Login form -->
+    <div class="account_login">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="id_username">{{ form.username.label }}:</label>
+                {{ form.username }}
+            </div>
+            <div>
+                <label for="id_password">{{ form.password.label }}:</label>
+                {{ form.password }}
+            </div>
+            <div>
+                <i>{{ form.non_field_errors }}</i>
+            </div>
+            
+            <button type="submit" class="btn btn_red">Login</button>
+
+        </form>
+        <p>Don`t have an account? <a href="{% url 'register' %}">Register</a></p>
+    </div>
+    
+
+{% endblock %}
