@@ -4,34 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: added Cloudinary and fix 404.html font">
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/managers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0002_alter_myappuser_options.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0003_alter_account_profile_picture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0004_alter_account_profile_picture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0005_alter_account_profile_picture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0006_alter_account_date_of_birth_alter_account_first_name_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0007_alter_account_profile_picture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0008_alter_account_profile_picture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0009_account_address_account_phone_number_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0010_alter_account_address_alter_account_last_name.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/validators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/account_delete_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/account_edit_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/login_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/register_page.html" afterDir="false" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: extend User model and add Postgre.">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/snapxPhotography.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/snapxPhotography.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/snapx-photography.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/snapx-photography.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/account-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/account-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/account-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/account_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/categories.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/common/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contests/contest-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/contest_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/contests/contests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/contests.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -84,6 +72,7 @@
     "Python.tests.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "D:/softuni/python_web/snapx_photography/snapxPhotography/snapxPhotography/videos",
@@ -190,7 +179,7 @@
       <updated>1731230568768</updated>
       <workItem from="1731230569784" duration="11912000" />
       <workItem from="1731414844234" duration="9109000" />
-      <workItem from="1731481906054" duration="45255000" />
+      <workItem from="1731481906054" duration="57380000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -224,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731588468878</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update: extend User model and add Postgre.">
+      <option name="closed" value="true" />
+      <created>1731798686810</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731798686810</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +234,8 @@
     <MESSAGE value="Update: create urls and empty views" />
     <MESSAGE value="Update: added custom 404 website." />
     <MESSAGE value="Update: added Cloudinary and fix 404.html font" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: added Cloudinary and fix 404.html font" />
+    <MESSAGE value="Update: extend User model and add Postgre." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: extend User model and add Postgre." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -20,12 +20,12 @@ class AccountRegisterView(CreateView):
     model = UserModel
     form_class = MyAppUserCreationForm
     template_name = 'accounts/register_page.html'
-    success_url = 'login'
+    success_url = reverse_lazy('login')
 
 
 class AccountDetailView(DetailView):
     model = Account
-    template_name = 'accounts/account-details.html'
+    template_name = 'accounts/account_details.html'
 
 
 class AccountEditView(UpdateView):

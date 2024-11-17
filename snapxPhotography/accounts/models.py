@@ -74,7 +74,7 @@ class Account(models.Model):
         verbose_name="Phone Number",
         help_text='Phone Number must be in format: 088888888.',
         validators=[
-            MinLengthValidator(10),
+            MinLengthValidator(10, "Your Phone Number must be exactly 10 digits in given format!"),
             PhoneNumberValidator(),
         ]
 

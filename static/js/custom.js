@@ -128,10 +128,10 @@
 		function initializeClock(endtime){
 		var timeinterval = setInterval(function(){
 		  var t = getTimeRemaining(endtime);
-		  document.querySelector(".days > .value").innerText=t.days;
-		  document.querySelector(".hours > .value").innerText=t.hours;
-		  document.querySelector(".minutes > .value").innerText=t.minutes;
-		  document.querySelector(".seconds > .value").innerText=t.seconds;
+		  // document.querySelector(".days > .value").innerText=t.days;
+		  // document.querySelector(".hours > .value").innerText=t.hours;
+		  // document.querySelector(".minutes > .value").innerText=t.minutes;
+		  // document.querySelector(".seconds > .value").innerText=t.seconds;
 		  if(t.total<=0){
 			clearInterval(timeinterval);
 		  }
@@ -284,30 +284,30 @@
 		}
 	});
 
-	$(document).ready(function () {
-	    $(document).on("scroll", onScroll);
-	    
-	    //smoothscroll
-	    $('.scroll-to-section a[href^="#"]').on('click', function (e) {
-	        e.preventDefault();
-	        $(document).off("scroll");
-	        
-	        $('.scroll-to-section a').each(function () {
-	            $(this).removeClass('active');
-	        })
-	        $(this).addClass('active');
-	      
-	        var target = this.hash,
-	        menu = target;
-	       	var target = $(this.hash);
-	        $('html, body').stop().animate({
-	            scrollTop: (target.offset().top) - 79
-	        }, 500, 'swing', function () {
-	            window.location.hash = target;
-	            $(document).on("scroll", onScroll);
-	        });
-	    });
-	});
+	// $(document).ready(function () {
+	//     $(document).on("scroll", onScroll);
+	//
+	//     //smoothscroll
+	//     $('.scroll-to-section a[href^="#"]').on('click', function (e) {
+	//         e.preventDefault();
+	//         $(document).off("scroll");
+	//
+	//         $('.scroll-to-section a').each(function () {
+	//             $(this).removeClass('active');
+	//         })
+	//         $(this).addClass('active');
+	//
+	//         var target = this.hash,
+	//         menu = target;
+	//        	var target = $(this.hash);
+	//         $('html, body').stop().animate({
+	//             scrollTop: (target.offset().top) - 79
+	//         }, 500, 'swing', function () {
+	//             window.location.hash = target;
+	//             $(document).on("scroll", onScroll);
+	//         });
+	//     });
+	// });
 
 	function onScroll(event){
 	    var scrollPos = $(document).scrollTop();
@@ -383,42 +383,42 @@
     }
 
 
-	function visible(partial) {
-        var $t = partial,
-            $w = jQuery(window),
-            viewTop = $w.scrollTop(),
-            viewBottom = viewTop + $w.height(),
-            _top = $t.offset().top,
-            _bottom = _top + $t.height(),
-            compareTop = partial === true ? _bottom : _top,
-            compareBottom = partial === true ? _top : _bottom;
+	// function visible(partial) {
+    //     var $t = partial,
+    //         $w = jQuery(window),
+    //         viewTop = $w.scrollTop(),
+    //         viewBottom = viewTop + $w.height(),
+    //         _top = $t.offset().top,
+    //         _bottom = _top + $t.height(),
+    //         compareTop = partial === true ? _bottom : _top,
+    //         compareBottom = partial === true ? _top : _bottom;
+	//
+    //     return ((compareBottom <= viewBottom) && (compareTop >= viewTop) && $t.is(':visible'));
+	//
+    // }
 
-        return ((compareBottom <= viewBottom) && (compareTop >= viewTop) && $t.is(':visible'));
-
-    }
-
-    $(window).scroll(function() {
-
-        if (visible($('.count-digit'))) {
-            if ($('.count-digit').hasClass('counter-loaded')) return;
-            $('.count-digit').addClass('counter-loaded');
-
-            $('.count-digit').each(function() {
-                var $this = $(this);
-                jQuery({
-                    Counter: 0
-                }).animate({
-                    Counter: $this.text()
-                }, {
-                    duration: 3000,
-                    easing: 'swing',
-                    step: function() {
-                        $this.text(Math.ceil(this.Counter));
-                    }
-                });
-            });
-        }
-    })
+    // $(window).scroll(function() {
+	//
+    //     if (visible($('.count-digit'))) {
+    //         if ($('.count-digit').hasClass('counter-loaded')) return;
+    //         $('.count-digit').addClass('counter-loaded');
+	//
+    //         $('.count-digit').each(function() {
+    //             var $this = $(this);
+    //             jQuery({
+    //                 Counter: 0
+    //             }).animate({
+    //                 Counter: $this.text()
+    //             }, {
+    //                 duration: 3000,
+    //                 easing: 'swing',
+    //                 step: function() {
+    //                     $this.text(Math.ceil(this.Counter));
+    //                 }
+    //             });
+    //         });
+    //     }
+    // })
 
 
 })(window.jQuery);

@@ -1405,76 +1405,6 @@ section.closed-contests {
 }
 
 
-/*
----------------------------------------------
-pricing-plans
----------------------------------------------
-*/
-
-.pricing-item {
-    text-align: center;
-    padding: 30px;
-    border: 1px solid #e0e0e0;
-    border-radius: 15px;
-    transition: all .5s;
-}
-
-.pricing-item:hover {
-    border: 1px solid transparent;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
-}
-
-.pricing-item:hover h4 {
-    color: #00bdfe;
-}
-
-.pricing-item img {
-    max-width: 240px;
-}
-
-.pricing-item h4 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #d4d4d4;
-    transition: all .5s;
-}
-
-.pricing-item ul li {
-    font-size: 15px;
-    color: #00bdfe;
-    margin-bottom: 10px;
-}
-
-.pricing-item ul.first-plan li:nth-child(5),
-.pricing-item ul.first-plan li:nth-child(4) {
-    color: #afafaf;
-    text-decoration: line-through;
-}
-
-.pricing-item ul.second-plan li:nth-child(5) {
-    color: #afafaf;
-    text-decoration: line-through;
-}
-
-.pricing-item ul li:last-child {
-    margin-bottom: 0px;
-}
-
-.pricing-item span.price {
-    font-size: 30px;
-    color: #00bdfe;
-    font-weight: 700;
-    display: inline-block;
-    margin-top: 30px;
-}
-
-.pricing-item .border-button {
-    margin-top: 30px;
-}
-
 
 /* 
 ---------------------------------------------
@@ -2716,17 +2646,9 @@ Account edit page
     text-align: center;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-    form {
-        padding: 20px;
-    }
-
-    form h1 {
-        font-size: 20px;
-    }
+.account-edit .error {
+    color: red;
 }
-
 .button-group {
     margin-top: 1rem;
 }
