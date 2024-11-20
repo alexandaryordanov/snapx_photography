@@ -2,36 +2,80 @@
 
 
 {% block content %}
-    <!-- Register Form -->
-    <div class="account_register">
-        <form action="" method="post">
-            {% csrf_token %}
-            <div>
-                <label for="id_username">{{ form.username.label }}</label>
-                {{ form.username }}
-                <i>{{ form.username.errors }}</i>
-            </div>
-            <div>
-                <label for="id_email">{{ form.email.label }}</label>
-                {{ form.email }}
-                <i>{{ form.email.errors }}</i>
-            </div>
-            <div>
-                <label for="id_password1">{{ form.password1.label }}</label>
-                {{ form.password1 }}
-                <i>{{ form.password1.errors }}</i>
-            </div>
-            <div>
-                <i>{{ form.password1.help_text }}</i>
-            </div>
-            <div>
-                <label for="id_password2">{{ form.password2.label }}</label>
-                {{ form.password2 }}
-                <i>{{ form.password2.errors }}</i>
-            </div>
-            <button type="submit" class="btn btn_red">Register</button>
-
-        </form>
+    
+    <div class="my_register container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+            <h2 class="text-center mb-4">Register</h2>
+            <form method="post" >
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_username" class="form-label">Username</label>
+                    <input 
+                        type="text" 
+                        class="form-control {% if form.username.errors %}is-invalid{% endif %}" 
+                        id="id_username" 
+                        name="username" 
+                        value="{{ form.username.value|default:'' }}" 
+                        placeholder="Enter your username" 
+                        required>
+                    {% if form.username.errors %}
+                        <div class="invalid-feedback">
+                            {{ form.username.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    <label for="id_email" class="form-label">Email</label>
+                    <input 
+                        type="email" 
+                        class="form-control {% if form.email.errors %}is-invalid{% endif %}" 
+                        id="id_email" 
+                        name="email" 
+                        value="{{ form.email.value|default:'' }}" 
+                        placeholder="Enter your email" 
+                        required>
+                    {% if form.email.errors %}
+                        <div class="invalid-feedback">
+                            {{ form.email.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    <label for="id_password1" class="form-label">Password</label>
+                    <input 
+                        type="password" 
+                        class="form-control {% if form.password1.errors %}is-invalid{% endif %}" 
+                        id="id_password1" 
+                        name="password1" 
+                        placeholder="Enter your password" 
+                        required>
+                    {% if form.password1.errors %}
+                        <div class="invalid-feedback">
+                            {{ form.password1.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    <label for="id_password2" class="form-label">Confirm Password</label>
+                    <input 
+                        type="password" 
+                        class="form-control {% if form.password2.errors %}is-invalid{% endif %}" 
+                        id="id_password2" 
+                        name="password2" 
+                        placeholder="Confirm your password" 
+                        required>
+                    {% if form.password2.errors %}
+                        <div class="invalid-feedback">
+                            {{ form.password2.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Register</button>
+            </form>
+            <p class="text-center mt-3">
+                Already have an account? <a href="{% url 'login' %}">Login here</a>
+            </p>
+        </div>
     </div>
 
 

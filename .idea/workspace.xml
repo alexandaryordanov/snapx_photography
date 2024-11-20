@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: extend User model and add Postgre.">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/snapxPhotography.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/snapxPhotography.iml" afterDir="false" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: added signal for automatic account creation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/snapx-photography.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/snapx-photography.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/account-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/account_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/login_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/register_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/register_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/common/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contests/contest-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/contest_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contests/contests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/contests.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +170,7 @@
       <updated>1731230568768</updated>
       <workItem from="1731230569784" duration="11912000" />
       <workItem from="1731414844234" duration="9109000" />
-      <workItem from="1731481906054" duration="57380000" />
+      <workItem from="1731481906054" duration="77541000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -221,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731798686810</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update: added signal for automatic account creation.">
+      <option name="closed" value="true" />
+      <created>1731872597812</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731872597812</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +234,8 @@
     <MESSAGE value="Update: added custom 404 website." />
     <MESSAGE value="Update: added Cloudinary and fix 404.html font" />
     <MESSAGE value="Update: extend User model and add Postgre." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: extend User model and add Postgre." />
+    <MESSAGE value="Update: added signal for automatic account creation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: added signal for automatic account creation." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,27 +2,58 @@
 
 
 {% block content %}
-    <!-- Username & Password Login form -->
-    <div class="account_login">
-        <form action="" method="post">
-            {% csrf_token %}
-            <div>
-                <label for="id_username">{{ form.username.label }}:</label>
-                {{ form.username }}
-            </div>
-            <div>
-                <label for="id_password">{{ form.password.label }}:</label>
-                {{ form.password }}
-            </div>
-            <div>
-                <i>{{ form.non_field_errors }}</i>
-            </div>
-            
-            <button type="submit" class="btn btn_red">Login</button>
-
-        </form>
-        <p>Don`t have an account? <a href="{% url 'register' %}">Register</a></p>
+    
+    <div class="my_login container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+            <h2 class="text-center mb-4">Login</h2>
+            <form method="post" >
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_username" class="form-label">Email</label>
+                    <input 
+                        type="text" 
+                        class="form-control {% if form.username.errors %}is-invalid{% endif %}" 
+                        id="id_username" 
+                        name="username" 
+                        placeholder="Enter your email" 
+                        value="{{ form.username.value|default:'' }}" 
+                        required>
+                    {% if form.username.errors %}
+                        <div class="invalid-feedback">
+                            {{ form.username.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    <label for="id_password" class="form-label">Password</label>
+                    <input 
+                        type="password" 
+                        class="form-control {% if form.password.errors %}is-invalid{% endif %}" 
+                        id="id_password" 
+                        name="password" 
+                        placeholder="Enter your password" 
+                        required>
+                    {% if form.password.errors %}
+                        <div class="invalid-feedback">
+                            {{ form.password.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="remember_me" name="remember">
+                    <label class="form-check-label" for="remember_me">Remember Me</label>
+                </div>
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <p class="text-center mt-3">
+                Don't have an account? <a href="{% url 'register' %}">Register here</a>
+            </p>
+        </div>
     </div>
     
-
 {% endblock %}
