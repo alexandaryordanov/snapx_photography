@@ -6,7 +6,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 from snapxPhotography.accounts.managers import MyAppUserManager
-from snapxPhotography.accounts.validators import ProfileImageValidator, PhoneNumberValidator, NameValidator
+from snapxPhotography.accounts.validators import PhoneNumberValidator, NameValidator
 
 
 # Create your models here.
@@ -39,7 +39,6 @@ class Account(models.Model):
 
     first_name = models.CharField(
         max_length=NAME_MAX_LENGTH,
-        blank=True,
         null=True,
         verbose_name="First Name",
         validators=[
@@ -52,7 +51,6 @@ class Account(models.Model):
 
     last_name = models.CharField(
         max_length=NAME_MAX_LENGTH,
-        blank=True,
         null=True,
         verbose_name='Last Name',
         validators=[
@@ -93,3 +91,6 @@ class Account(models.Model):
         verbose_name='Profile Picture',
         format='jpg',
     )
+
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name

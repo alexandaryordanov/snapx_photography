@@ -1,0 +1,57 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 header-text">
+                    <h2 class="space-need">{{ object.name }} <em>Contest</em></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contest-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="top-content">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                {% if object.is_open %}
+                                    <span class="open">Open Contest</span>
+                                {% else %}
+                                    <span class="close">Closed Contest</span>
+                                {% endif %}
+                            </div>
+                            <div class="col-lg-8">
+                                <ul>
+                                    <li><i class="fa fa-medal"></i> <span>Award:</span> ${{ object.award }}</li>
+                                    <li><span>Time left:</span>{{ object.deadline|timeuntil }}</li>
+                                    <li><span>Participants:</span>{{ object.participants }}</li>
+                                    <li><span>Submittions:</span> {{ object.photo.count }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="main-content">
+                        <h4>Requirements Of The Contest</h4>
+                        <h6>Picture Should Have</h6>
+                        <p>{{ object.requirements }}</p>
+                        {% if object.is_open %}
+                            <div class="main-button">
+                                <a href="{% url 'photo-add' %}">Submit Your Photo</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

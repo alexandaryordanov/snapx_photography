@@ -23,11 +23,15 @@
                         {% else %}
                             <img src="{% static 'images/user-avatar.jpg' %}" alt="">
                         {% endif %}
-                        <h4>{{ object.first_name }} {{ object.last_name }}</h4>
+                        {% if object.first_name %}
+                            <h4>{{ object.first_name }} {{ object.last_name }}</h4>
+                        {% endif %}
                     </div>
-                    <div class="button-group">
-                        <a href="{% url 'account-edit' request.user.pk %}" class="btn btn-edit">Edit</a>
-                        <a href="{% url 'account-delete' request.user.pk %}" class="btn btn-delete">Delete</a>
+                    <div class="container mt-5">
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="{% url 'account-edit' request.user.pk %}" class="btn btn-primary flex-fill text-center">Edit</a>
+                            <a href="{% url 'account-delete' request.user.pk %}" class="btn btn-danger flex-fill text-center">Delete</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">

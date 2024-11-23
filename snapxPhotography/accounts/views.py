@@ -41,6 +41,6 @@ class AccountEditView(UpdateView):
 
 
 class AccountDeleteView(DeleteView):
-    model = Account
+    model = UserModel
     template_name = 'accounts/account_delete_page.html'
     success_url = reverse_lazy('index')

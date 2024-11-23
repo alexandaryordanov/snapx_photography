@@ -4,14 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: added signal for automatic account creation.">
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: refactor login and register page and update requirements.txt">
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0011_alter_account_first_name_alter_account_last_name_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/migrations/0002_alter_category_category_image_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/migrations/0003_alter_category_options.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/templatetags/url_query_append.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/migrations/0002_alter_contest_category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/migrations/0003_contest_requirements_alter_contest_award_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/migrations/0004_alter_contest_award.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/migrations/0005_alter_contest_award.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/validators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/categories/add_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/categories/dashboard_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/categories/delete_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/categories/edit_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contests/add_contest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contests/delete_contest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contests/edit_contest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/snapx-photography.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/snapx-photography.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/login_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/register_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/register_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/account_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/account_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/categories.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/common/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contests/contest_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/details_contest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contests/contests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/dashboard_contest.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +57,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -170,7 +203,7 @@
       <updated>1731230568768</updated>
       <workItem from="1731230569784" duration="11912000" />
       <workItem from="1731414844234" duration="9109000" />
-      <workItem from="1731481906054" duration="77541000" />
+      <workItem from="1731481906054" duration="114145000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -220,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731872597812</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update: refactor login and register page and update requirements.txt">
+      <option name="closed" value="true" />
+      <created>1732095601416</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732095601416</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,18 +276,8 @@
     <MESSAGE value="Update: added Cloudinary and fix 404.html font" />
     <MESSAGE value="Update: extend User model and add Postgre." />
     <MESSAGE value="Update: added signal for automatic account creation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: added signal for automatic account creation." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/snapxPhotography/categories/urls.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Update: refactor login and register page and update requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: refactor login and register page and update requirements.txt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/snapxPhotography$tests.coverage" NAME="tests Coverage Results" MODIFIED="1731780177428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/snapxPhotography/accounts" />

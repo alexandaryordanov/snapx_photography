@@ -44,8 +44,8 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="{% url 'index' %}" class="active">Home</a></li>
-                        <li><a href="../contests/contests.html">Contests</a></li>
-                        <li><a href="../categories/categories.html">Categories</a></li>
+                        <li><a href="{% url 'contest-dashboard' %}">Contests</a></li>
+                        <li><a href="{% url 'category-dashboard' %}">Categories</a></li>
                         {% if request.user.is_authenticated %}
                         <li><a href="{% url 'account-details' request.user.pk %}">Account</a></li>
                         {% endif %}

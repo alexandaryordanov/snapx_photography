@@ -1,0 +1,240 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% load url_query_append %}
+
+{% block content %}
+    <div class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 header-text">
+                    <h2>Discover Categories on <em>SnapX</em></h2>
+                    <p>Welcome to the Categories page! Explore a variety of themes like Nature, Urban Life, and
+                        Portraits, each designed to showcase your unique photography style. Choose a category, submit
+                        your best shot, and compete with talented photographers. Let your creativity shine!</p>
+                </div>
+            </div>
+        </div>
+        {% if request.user.is_staff %}
+            <div>
+                <p>You are admin and can add a Category by clicking button bellow.</p>
+                <a href="{% url 'category-add' %}" class="btn btn-primary">Add Category</a>
+            </div>
+        {% endif %}
+    </div>
+
+
+
+    <div class="top-categories">
+        <div class="container">
+            <div class="row">
+                {% for category in object_list %}
+                    <div class="col-lg col-sm-4">
+                        <div class="item">
+                            <div class="icon">
+                                {% if category.category_image %}
+                                    <img src="{{ category.category_image.url }}" alt="">
+                                {% else %}
+                                    <img src="{% static 'images/icon-01.png' %}" alt="">
+                                {% endif %}
+                            </div>
+                            <h4>{{ category.name }}</h4>
+                            <p class="cat-desc">{{ category.description }}</p>
+                            <span>Available Contests</span>
+                            <span class="counter">{{ category.contests_open.count }}</span>
+                            {% if request.user.is_staff %}
+                                <div class="d-flex gap-2">
+                                    <a href="{% url 'category-edit' category.pk %}" class="btn btn-primary w-50 text-center">Edit</a>
+                                    <a href="{% url 'category-delete' category.pk %}" class="btn btn-danger w-50 text-center">Delete</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="col-lg col-sm-4">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="{% static 'images/icon-01.png' %}" alt="">
+                            </div>
+                            <h4>No category has created yet!!!</h4>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+             <!-- Start Pagination -->
+            <div class="pagination">
+                <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+
+                <span class="step-links-buttons">
+
+                    <!-- If there are previous and next photos -->
+                    {% if page_obj.has_previous and page_obj.has_next %}
+                        <a href="?{% url_query_append_tag request 'page' page_obj.previous_page_number %}">
+                            <i class="fa fa-arrow-left"></i>
+                        </a>
+                        <a href="?{% url_query_append_tag request 'page' page_obj.next_page_number %}">
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+
+                    <!-- If there are only previous photos -->
+                    {% elif page_obj.has_previous %}
+                        <a href="?{% url_query_append_tag request 'page' page_obj.previous_page_number %}">
+                            <i class="fa fa-arrow-left"></i>
+                        </a>
+
+                    <!-- If there are only next photos -->
+                    {% elif page_obj.has_next %}
+                        <a href="?{% url_query_append_tag request 'page' page_obj.next_page_number %}">
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    {% endif %}
+
+                </span>
+            </div>
+            <!-- End Pagination -->
+
+        </div>
+    </div>
+
+    <section class="featured-contests">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading text-center">
+                        <h6>Featured Contests</h6>
+                        <h4>View Most <em>Popular</em> Category <em>Contests</em></h4>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/images/featured-image-02.jpg" alt="">
+                            <div class="hover-effect">
+                                <div class="content">
+                                    <div class="top-content">
+                                        <span class="award">Award Price</span>
+                                        <span class="price">$1,600</span>
+                                    </div>
+                                    <h4>Walk In The Nature Night</h4>
+                                    <div class="info">
+                                        <span class="participants"><img src="assets//images/icon-03.png"
+                                                                        alt=""><br>60<br>Participants</span>
+                                        <span class="submittions"><img src="assets//images/icon-01.png"
+                                                                       alt=""><br>188<br>Submissions</span>
+                                    </div>
+                                    <div class="border-button">
+                                        <a href="../contests/details_contest.html">Browse Nature Contests</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/images/featured-image-01.jpg" alt="">
+                            <div class="hover-effect">
+                                <div class="content">
+                                    <div class="top-content">
+                                        <span class="award">Award Price</span>
+                                        <span class="price">$3,200</span>
+                                    </div>
+                                    <h4>Walk In The Nature Night</h4>
+                                    <div class="info">
+                                        <span class="participants"><img src="assets//images/icon-03.png"
+                                                                        alt=""><br>78<br>Participants</span>
+                                        <span class="submittions"><img src="assets//images/icon-01.png"
+                                                                       alt=""><br>240<br>Submissions</span>
+                                    </div>
+                                    <div class="border-button">
+                                        <a href="../contests/details_contest.html">Browse Nature Contests</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/images/featured-image-03.jpg" alt="">
+                            <div class="hover-effect">
+                                <div class="content">
+                                    <div class="top-content">
+                                        <span class="award">Award Price</span>
+                                        <span class="price">$4,100</span>
+                                    </div>
+                                    <h4>Walk In The Nature Night</h4>
+                                    <div class="info">
+                                        <span class="participants"><img src="assets//images/icon-03.png"
+                                                                        alt=""><br>112<br>Participants</span>
+                                        <span class="submittions"><img src="assets//images/icon-01.png"
+                                                                       alt=""><br>286<br>Submissions</span>
+                                    </div>
+                                    <div class="border-button">
+                                        <a href="../contests/details_contest.html">Browse Nature Contests</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/images/featured-image-04.jpg" alt="">
+                            <div class="hover-effect">
+                                <div class="content">
+                                    <div class="top-content">
+                                        <span class="award">Award Price</span>
+                                        <span class="price">$3,400</span>
+                                    </div>
+                                    <h4>Walk In The Nature Night</h4>
+                                    <div class="info">
+                                        <span class="participants"><img src="assets//images/icon-03.png"
+                                                                        alt=""><br>54<br>Participants</span>
+                                        <span class="submittions"><img src="assets//images/icon-01.png"
+                                                                       alt=""><br>140<br>Submissions</span>
+                                    </div>
+                                    <div class="border-button">
+                                        <a href="../contests/details_contest.html">Browse Nature Contests</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/images/featured-image-05.jpg" alt="">
+                            <div class="hover-effect">
+                                <div class="content">
+                                    <div class="top-content">
+                                        <span class="award">Award Price</span>
+                                        <span class="price">$2,200</span>
+                                    </div>
+                                    <h4>Walk In The Nature Night</h4>
+                                    <div class="info">
+                                        <span class="participants"><img src="assets//images/icon-03.png"
+                                                                        alt=""><br>68<br>Participants</span>
+                                        <span class="submittions"><img src="assets//images/icon-01.png"
+                                                                       alt=""><br>162<br>Submissions</span>
+                                    </div>
+                                    <div class="border-button">
+                                        <a href="../contests/details_contest.html">Browse Nature Contests</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+      
