@@ -1,3 +1,4 @@
+from django import forms
 from django.utils import timezone
 
 from cloudinary.models import CloudinaryField
@@ -9,9 +10,8 @@ UserModel = get_user_model()
 
 # Create your models here.
 class Category(models.Model):
-
     class Meta:
-        ordering = ['pk']
+        ordering = ['name']
 
     @property
     def contests_open(self):
@@ -20,7 +20,7 @@ class Category(models.Model):
     name = models.CharField(max_length=50, unique=True, verbose_name='Name')
     description = models.TextField(max_length=100, blank=True, null=True, verbose_name='Description')
     created_by = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='categories')
-    category_image = CloudinaryField(verbose_name='Category Image',)
+    category_image = CloudinaryField(verbose_name='Category Image', )
 
     def __str__(self):
         return self.name

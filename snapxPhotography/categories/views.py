@@ -2,7 +2,7 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 
-from snapxPhotography.categories.forms import CategoryAddForm
+from snapxPhotography.categories.forms import CategoryAddForm, CategoryEditForm
 from snapxPhotography.categories.models import Category
 
 
@@ -33,7 +33,7 @@ class CategoryEditPageView(UserPassesTestMixin, UpdateView):
     model = Category
     template_name = 'categories/edit_category.html'
     success_url = reverse_lazy('category-dashboard')
-    fields = ['name', 'description', 'category_image']
+    form_class = CategoryEditForm
 
     def test_func(self):
         return self.request.user.is_staff
@@ -46,4 +46,3 @@ class CategoryDeleteView(UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         return self.request.user.is_staff
-

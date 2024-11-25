@@ -17,9 +17,8 @@ class ContestAddForm(ContestBaseForm):
     pass
 
 
-class ContestEditForm(ContestBaseForm):
-    pass
+class ContestDeleteForm(DisabledFieldsMixin, ContestBaseForm):
+    disabled_fields = ['name', 'requirements', 'award', 'deadline']
 
-
-class ContestDeleteForm(ContestBaseForm, DisabledFieldsMixin):
-    disabled_fields = ['name', 'requirements', 'award', 'deadline', 'category', 'created_by']
+    class Meta(ContestBaseForm.Meta):
+        exclude = ['category', 'created_by']

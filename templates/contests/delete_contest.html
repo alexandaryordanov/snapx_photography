@@ -1,5 +1,17 @@
 {% extends 'common/base.html' %}
+{% load crispy_forms_filters %}
 
 {% block content %}
-
+    <div class="container mt-5 category-delete">
+        <h2>Delete Contest</h2>
+        <p>Are you sure you want to delete the contest <strong>{{ object }}</strong>?</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="d-flex gap-3">
+                <a href="{% url 'contest-details' object.pk %}" class="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+    </div>
 {% endblock %}

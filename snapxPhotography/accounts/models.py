@@ -43,9 +43,9 @@ class Account(models.Model):
         verbose_name="First Name",
         validators=[
             NameValidator(),
-            MinLengthValidator(NAME_MIN_LENGTH, f'Your First Name must be between {NAME_MIN_LENGTH} and {NAME_MAX_LENGTH} characters.')
+            MinLengthValidator(NAME_MIN_LENGTH,
+                               f'Your First Name must be between {NAME_MIN_LENGTH} and {NAME_MAX_LENGTH} characters.')
         ]
-
 
     )
 
@@ -55,7 +55,8 @@ class Account(models.Model):
         verbose_name='Last Name',
         validators=[
             NameValidator(),
-            MinLengthValidator(NAME_MIN_LENGTH, f'Your Last Name must be between {NAME_MIN_LENGTH} and {NAME_MAX_LENGTH} characters.'),
+            MinLengthValidator(NAME_MIN_LENGTH,
+                               f'Your Last Name must be between {NAME_MIN_LENGTH} and {NAME_MAX_LENGTH} characters.'),
         ]
     )
 
@@ -89,7 +90,6 @@ class Account(models.Model):
         blank=True,
         null=True,
         verbose_name='Profile Picture',
-        format='jpg',
     )
 
     def __str__(self):

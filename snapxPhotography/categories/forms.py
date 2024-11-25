@@ -8,6 +8,12 @@ class CategoryBaseForm(forms.ModelForm):
         model = Category
         exclude = ['created_by']
 
+    def clean_category_image(self):
+        image = self.cleaned_data.get('category_image')
+        if not image.name.endswith('.png'):
+            raise forms.ValidationError('Only .png files are allowed')
+        return image
+
 
 class CategoryAddForm(CategoryBaseForm):
     pass

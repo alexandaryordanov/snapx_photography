@@ -17,5 +17,8 @@ class Photo(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
     uploaded_by = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='photos')
 
+    class Meta:
+        ordering = ['uploaded_at']
+
     def __str__(self):
         return self.title

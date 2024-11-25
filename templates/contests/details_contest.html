@@ -26,12 +26,13 @@
                                 {% else %}
                                     <span class="close">Closed Contest</span>
                                 {% endif %}
+                                <a href="{% url 'contest-delete' object.pk %}" class="btn btn-danger">Delete</a>
                             </div>
                             <div class="col-lg-8">
                                 <ul>
-                                    <li><i class="fa fa-medal"></i> <span>Award:</span> ${{ object.award }}</li>
-                                    <li><span>Time left:</span>{{ object.deadline|timeuntil }}</li>
-                                    <li><span>Participants:</span>{{ object.participants }}</li>
+                                    <li><i class="fa fa-medal"></i> <span>Award:</span> $ {{ object.award }}</li>
+                                    <li><span>Time left:</span> {{ object.deadline|timeuntil }}</li>
+                                    <li><span>Participants:</span> {{ object.participants }}</li>
                                     <li><span>Submittions:</span> {{ object.photo.count }}</li>
                                 </ul>
                             </div>

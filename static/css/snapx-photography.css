@@ -2690,14 +2690,15 @@ Account edit page
     margin-left: 1rem;
 }
 
-.account_delete, .category-delete {
+.account_delete,
+.category-delete {
     background: #ffffff;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 60vh;
+    min-height: 100vh;
 }
 
 .account_delete h2 {

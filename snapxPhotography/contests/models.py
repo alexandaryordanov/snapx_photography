@@ -13,17 +13,19 @@ UserModel = get_user_model()
 
 class Contest(models.Model):
 
+    class Meta:
+        ordering = ['name']
+
     @property
     def is_open(self):
         return self.deadline > timezone.now().date()
 
     @property
     def participants(self):
-        users = []
-
+        creators = []
         for photo in self.photo.all():
-            users.append(photo.uploaded_by)
-        return len(set(users))
+            creators.append(photo.uploaded_by)
+        return len(set(creators))
 
     name = models.CharField(
         max_length=50,

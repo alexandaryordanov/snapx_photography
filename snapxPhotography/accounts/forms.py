@@ -1,6 +1,6 @@
 import datetime
 
-
+from cloudinary.templatetags import cloudinary
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
@@ -37,3 +37,9 @@ class AccountEditForm(forms.ModelForm):
         widgets = {
             'date_of_birth': forms.SelectDateWidget(years=range(1800, now().year + 1)),
         }
+
+    def clean_profile_picture(self):
+        image = self.cleaned_data.get('profile_picture')
+        if not image.name.endswith('.jpg'):
+            raise forms.ValidationError('Only .jpg files are allowed')
+        return image
