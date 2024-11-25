@@ -49,7 +49,7 @@ python manage.py migrate
 ---
 ### Стартирайте проекта с командата:
 ```bash
- python manage.py runserver --insecure
+ python manage.py runserver
 ```
 ---
 📝 Лиценз
