@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'cloudinary_storage',
     'crispy_forms',
-    'crispy_bootstrap5'
+    'crispy_bootstrap5',
+    'rest_framework',
 ] + SNAPX_APPS
 
 MIDDLEWARE = [
@@ -166,3 +167,9 @@ AUTH_USER_MODEL = 'accounts.MyAppUser'
 
 LOGIN_REDIRECT_URL = reverse_lazy('index')
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ]
+}

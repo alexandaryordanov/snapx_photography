@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: update requirements.txt" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: update requirements.txt">
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/migrations/0004_alter_category_options.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/migrations/0006_alter_contest_options.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/migrations/0002_alter_photo_options_photo_vote.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,34 +61,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.snapxPhotography.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tests.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/softuni/python_web/snapx_photography/snapxPhotography/snapxPhotography/videos&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.snapxPhotography.executor": "Run",
+    "Python.tests.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/softuni/python_web/snapx_photography/snapxPhotography/snapxPhotography",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\videos" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\photos" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\contests" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\common" />
-      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates\categories" />
@@ -163,6 +177,7 @@
       <workItem from="1731230569784" duration="11912000" />
       <workItem from="1731414844234" duration="9109000" />
       <workItem from="1731481906054" duration="144583000" />
+      <workItem from="1732558953613" duration="15841000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -244,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732558288762</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update: update requirements.txt">
+      <option name="closed" value="true" />
+      <created>1732559120324</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732559120324</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
