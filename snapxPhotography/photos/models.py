@@ -19,7 +19,7 @@ class Photo(models.Model):
     vote = models.PositiveIntegerField(default=0, editable=False)
 
     class Meta:
-        ordering = ['vote', 'uploaded_at']
+        ordering = ['-vote', 'uploaded_at']
 
     def __str__(self):
         return self.title

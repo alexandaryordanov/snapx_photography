@@ -24,20 +24,18 @@
                         </div>
                     {% endif %}
                 </div>
-                <div class="mb-3">
-                    <label for="id_password" class="form-label">Password</label>
+                <div class="mb-3 password-container">
+                    <label for="id_password1" class="form-label">Password</label>
                     <input 
                         type="password" 
                         class="form-control {% if form.password.errors %}is-invalid{% endif %}" 
-                        id="id_password" 
+                        id="id_password1" 
                         name="password" 
                         placeholder="Enter your password" 
                         required>
-                    {% if form.password.errors %}
-                        <div class="invalid-feedback">
-                            {{ form.password.errors.0 }}
-                        </div>
-                    {% endif %}
+                    <button type="button" id="togglePassword" aria-label="Toggle password visibility">
+                        <i class="eye-icon" id="eyeIcon">👁️</i>
+                    </button>
                 </div>
                 <div class="form-check mb-3">
                     <input type="checkbox" class="form-check-input" id="remember_me" name="remember">

@@ -2748,7 +2748,8 @@ Account edit page
 
 /*Category add page*/
 
-.category-add {
+.category-add,
+.contest-delete {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -2757,9 +2758,10 @@ Account edit page
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     gap: 1rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
     min-height: 100vh;
 }
+
 
 .cat-desc {
     height: 7rem;
@@ -2812,6 +2814,38 @@ Account edit page
     cursor: not-allowed;
 }
 
+#id_password1 #id_password2{
+    width: 100%;
+    padding-right: 40px;
+    font-size: 16px;
+}
+
+.password-container,
+.password-container1 {
+    position: relative;
+    width: 100%;
+}
+
+/* Eye icon button */
+#togglePassword,
+#togglePassword1 {
+    position: absolute;
+    top: 75%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Prevent button from shifting input focus */
+#togglePassword:focus,
+#togglePassword1:focus {
+    outline: none;
+}
 
 /*
 ---------------------------------------------

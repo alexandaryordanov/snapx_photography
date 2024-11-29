@@ -40,6 +40,6 @@ class AccountEditForm(forms.ModelForm):
 
     def clean_profile_picture(self):
         image = self.cleaned_data.get('profile_picture')
-        if not image.name.endswith('.jpg'):
+        if image and not image.name.endswith('.jpg'):
             raise forms.ValidationError('Only .jpg files are allowed')
         return image

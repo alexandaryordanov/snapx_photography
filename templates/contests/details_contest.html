@@ -46,7 +46,7 @@
                         <p>{{ object.requirements }}</p>
                         {% if object.is_open %}
                             <div class="main-button">
-                                <a href="{% url 'photo-add' %}">Submit Your Photo</a>
+                                <a href="{% url 'photo-add' %}?current_contest={{ contest }}">Submit Your Photo</a>
                             </div>
                         {% endif %}
                     </div>

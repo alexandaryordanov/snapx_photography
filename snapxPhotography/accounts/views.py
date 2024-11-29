@@ -1,8 +1,9 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.views import LoginView
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
+from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
 
 from snapxPhotography.accounts.forms import MyAppUserCreationForm, AccountEditForm
 from snapxPhotography.accounts.models import Account
@@ -15,6 +16,16 @@ UserModel = get_user_model()
 class AccountLoginView(LoginView):
     template_name = 'accounts/login_page.html'
 
+    def form_valid(self, form):
+        remember_me = self.request.POST.get("remember")
+
+        if remember_me:
+            self.request.session.set_expiry(30 * 24 * 60 * 60)
+        else:
+            self.request.session.set_expiry(14 * 24 * 60 * 60)
+
+        return super().form_valid(form)
+
 
 class AccountRegisterView(CreateView):
     model = UserModel
@@ -23,12 +34,12 @@ class AccountRegisterView(CreateView):
     success_url = reverse_lazy('login')
 
 
-class AccountDetailView(DetailView):
+class AccountDetailView(LoginRequiredMixin, DetailView):
     model = Account
     template_name = 'accounts/account_details.html'
 
 
-class AccountEditView(UpdateView):
+class AccountEditView(UserPassesTestMixin, UpdateView):
     model = Account
     form_class = AccountEditForm
     template_name = 'accounts/account_edit_page.html'
@@ -39,8 +50,16 @@ class AccountEditView(UpdateView):
             kwargs={'pk': self.object.pk}
         )
 
+    def test_func(self):
+        account = get_object_or_404(Account, pk=self.kwargs['pk'])
+        return self.request.user == account.user
 
-class AccountDeleteView(DeleteView):
+
+class AccountDeleteView(UserPassesTestMixin, DeleteView):
     model = UserModel
     template_name = 'accounts/account_delete_page.html'
     success_url = reverse_lazy('index')
+
+    def test_func(self):
+        account = get_object_or_404(Account, pk=self.kwargs['pk'])
+        return self.request.user == account.user

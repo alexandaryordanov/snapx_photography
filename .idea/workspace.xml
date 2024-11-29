@@ -4,20 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: update requirements.txt">
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/migrations/0004_alter_category_options.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/contests/migrations/0006_alter_contest_options.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/migrations/0002_alter_photo_options_photo_vote.py" afterDir="false" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: added vote capabilities, using Django REST.">
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/photos/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/password_eye.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/photos/add_photo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/snapx-photography.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/snapx-photography.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/account_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/account_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/login_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/register_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/register_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contests/delete_contest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/delete_contest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contests/details_contest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/details_contest.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +37,7 @@
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -72,7 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/softuni/python_web/snapx_photography/snapxPhotography/snapxPhotography",
+    "last_opened_file_path": "D:/softuni/python_web/snapx_photography/snapxPhotography",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,11 +90,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates\photos" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\videos" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\photos" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\contests" />
-      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates\categories" />
@@ -177,7 +183,9 @@
       <workItem from="1731230569784" duration="11912000" />
       <workItem from="1731414844234" duration="9109000" />
       <workItem from="1731481906054" duration="144583000" />
-      <workItem from="1732558953613" duration="15841000" />
+      <workItem from="1732558953613" duration="16152000" />
+      <workItem from="1732778561446" duration="11959000" />
+      <workItem from="1732897395454" duration="9894000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -267,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732559120324</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update: added vote capabilities, using Django REST.">
+      <option name="closed" value="true" />
+      <created>1732750511593</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732750511593</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +305,8 @@
     <MESSAGE value="Update: added category managment and patrialy contest mangement." />
     <MESSAGE value="Update: refactor contest templates and add search functionality." />
     <MESSAGE value="Update: update requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: update requirements.txt" />
+    <MESSAGE value="Update: added vote capabilities, using Django REST." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: added vote capabilities, using Django REST." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -298,6 +315,11 @@
           <url>file://$PROJECT_DIR$/snapxPhotography/mixins.py</url>
           <line>10</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/snapxPhotography/accounts/views.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
