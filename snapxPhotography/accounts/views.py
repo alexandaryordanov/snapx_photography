@@ -22,7 +22,7 @@ class AccountLoginView(LoginView):
         if remember_me:
             self.request.session.set_expiry(30 * 24 * 60 * 60)
         else:
-            self.request.session.set_expiry(14 * 24 * 60 * 60)
+            self.request.session.set_expiry(24*60*60)
 
         return super().form_valid(form)
 

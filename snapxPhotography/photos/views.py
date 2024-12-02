@@ -57,6 +57,12 @@ class VotePhotoView(APIView):
         if Vote.objects.filter(user=request.user, photo=photo).exists():
             return Response({"detail": "You have already voted for this photo."}, status=status.HTTP_400_BAD_REQUEST)
 
+        if not photo.contest.is_open:
+            return Response({"detail": "The contest is closed. You can`t vote!"}, status=status.HTTP_400_BAD_REQUEST)
+
+        if request.user == photo.uploaded_by:
+            return Response({"detail": "You cannot vote for yourself."}, status=status.HTTP_400_BAD_REQUEST)
+
         Vote.objects.create(user=request.user, photo=photo)
 
         photo.vote += 1

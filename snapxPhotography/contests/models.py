@@ -40,7 +40,7 @@ class Contest(models.Model):
     )
 
     award = models.PositiveIntegerField(
-        help_text="Prize amount in currency (e.g., USD), maximum 5 digits",
+        help_text="Prize amount in currency (e.g., USD), 4 digits",
         verbose_name="Award",
         validators=[
             MaxValueValidator(9999, message='Please enter a 4 digit number!!!'),

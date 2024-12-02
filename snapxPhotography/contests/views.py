@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.core.paginator import Paginator
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
 
@@ -54,7 +56,7 @@ class ContestsDashboardView(ListView):
         return queryset
 
 
-class ContestAddPageView(CreateView):
+class ContestAddPageView(LoginRequiredMixin, CreateView):
     model = Contest
     form_class = ContestAddForm
     template_name = 'contests/add_contest.html'
@@ -67,12 +69,22 @@ class ContestAddPageView(CreateView):
         return super().form_valid(form)
 
 
-class ContestDetailsView(DetailView):
+class ContestDetailsView(LoginRequiredMixin, DetailView):
     model = Contest
     template_name = 'contests/details_contest.html'
 
+    def get_context_data(self, **kwargs):
+        contex = super().get_context_data(**kwargs)
+        photos_list = self.object.photo.all()
+        if photos_list:
+            paginator = Paginator(photos_list, 12)
+            page_number = self.request.GET.get('page')
+            photos = paginator.get_page(page_number)
+            contex['photos'] = photos
 
-class ContestDeletePageView(DeleteView):
+        return contex
+
+class ContestDeletePageView(UserPassesTestMixin, DeleteView):
     model = Contest
     template_name = 'contests/delete_contest.html'
     form_class = ContestDeleteForm
@@ -83,3 +95,7 @@ class ContestDeletePageView(DeleteView):
 
     def form_invalid(self, form):
         return self.form_valid(form)
+
+    def test_func(self):
+        contest = get_object_or_404(Contest, pk=self.kwargs['pk'])
+        return self.request.user == contest.created_by

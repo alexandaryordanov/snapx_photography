@@ -10,7 +10,7 @@ class CategoryBaseForm(forms.ModelForm):
 
     def clean_category_image(self):
         image = self.cleaned_data.get('category_image')
-        if image and not image.name.endswith('.png'):
+        if image and not image.name.lower().endswith('.png'):
             raise forms.ValidationError('Only .png files are allowed')
         return image
 

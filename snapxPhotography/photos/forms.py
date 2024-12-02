@@ -10,7 +10,7 @@ class PhotoBaseFrom(forms.ModelForm):
 
     def clean_image(self):
         image = self.cleaned_data.get('image')
-        if not image.name.endswith('.jpg'):
+        if not image.name.lower().endswith('.jpg'):
             raise forms.ValidationError('Only .jpg files are allowed')
         return image
 
