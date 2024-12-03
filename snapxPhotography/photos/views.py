@@ -1,5 +1,6 @@
-from django.http import request
-from django.shortcuts import get_object_or_404
+from django.contrib.auth.decorators import user_passes_test, login_required
+from django.http import request, HttpResponseForbidden
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
 from rest_framework import status
@@ -41,8 +42,17 @@ class PhotoAddPageView(CreateView):
         return reverse_lazy('contest-details', kwargs={'pk': self.object.contest.pk})
 
 
-class PhotoDeletePageView(DeleteView):
-    pass
+@login_required
+def photo_delete(request, pk: int):
+    photo = Photo.objects.get(pk=pk)
+    contest_pk = photo.contest.pk
+    if not photo.contest.is_open:
+        return HttpResponseForbidden("Contest is Closed. You cant delete this photo.")
+    if request.user == photo.uploaded_by:
+        photo.delete()
+    else:
+        return HttpResponseForbidden("You don't have permission to delete this item.")
+    return redirect('contest-details', pk=contest_pk)
 
 
 class VotePhotoView(APIView):
@@ -53,6 +63,9 @@ class VotePhotoView(APIView):
             photo = Photo.objects.get(pk=pk)
         except Photo.DoesNotExist:
             return Response({"detail": "Photo not found."}, status=status.HTTP_404_NOT_FOUND)
+
+        if request.user.is_staff:
+            return Response({"detail": "Administrators cannot vote!!!"}, status=status.HTTP_400_BAD_REQUEST)
 
         if Vote.objects.filter(user=request.user, photo=photo).exists():
             return Response({"detail": "You have already voted for this photo."}, status=status.HTTP_400_BAD_REQUEST)

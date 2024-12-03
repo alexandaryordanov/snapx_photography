@@ -40,37 +40,37 @@
                 </div>
                 <div class="col-lg-2 col-sm-6">
                   <div class="info">
-                    <h6>Rank</h6>
-                    <h4>#121</h4>
-                    <span>of 1680</span>
+                    <h6>Submissions</h6>
+                    <h4>{{ account.user.photos.count }}</h4>
+                    <span>of {{ total_photos }}</span>
                   </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
                   <div class="info">
-                    <h6>Top Rated</h6>
-                    <h4>Nature</h4>
-                    <span>Picture Category</span>
+                    <h6>Contests Add</h6>
+                    <h4>{{ account.user.contests.count }}</h4>
+                    <span>of {{ total_contests }}</span>
                   </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
                   <div class="info">
                     <h6>Contests Won</h6>
-                    <h4>90</h4>
-                    <span>of 12,400</span>
+                    <h4>{{ contest_won }}</h4>
+                    <span>of {{ total_closed }}</span>
                   </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
                   <div class="info">
                     <h6>Total Earned</h6>
-                    <h4>$68,000</h4>
+                    <h4>$ {{ total_earned }}</h4>
                     <span>All Time</span>
                   </div>
                 </div>
             </div>
         </div>
     </div>
-
-
+    
+    {% include 'common/gallery_photo.html' %}
 
     <section class="contact-us">
         <div class="container">
@@ -84,7 +84,7 @@
                     <div class="info-item">
                         <i class="fa fa-phone"></i>
                         <h4>Phone Number</h4>
-                        <span><a href="tel:{{ object.phone_number }}">{{ object.phone_number }}</a></span>
+                        <span><a href="tel:{{ object.phone_number|default:'N/A' }}">{{ object.phone_number|default:'N/A' }}</a></span>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -98,7 +98,7 @@
                     <div class="info-item">
                         <i class="fa fa-map-marked"></i>
                         <h4>Office Location</h4>
-                        <span>{{ object.address }}</span>
+                        <span>{{ object.address|default:'N/A' }}</span>
                     </div>
                 </div>
                 <div class="col-lg-12">

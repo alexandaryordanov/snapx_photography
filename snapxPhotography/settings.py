@@ -23,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='fallback-secret-key')
+SECRET_KEY = config('SECRET_KEY', None)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', None).split(',')
 
 # Application definition
 
@@ -93,7 +93,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "snapx",
         "USER": "postgres-user",
-        "PASSWORD": config('DATABASE_PASSWORD', default='fallback-password'),
+        "PASSWORD": config('DATABASE_PASSWORD', None),
         "HOST": "localhost",
         "PORT": "5432",
     }
@@ -147,15 +147,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Cloudinary settings
 cloudinary.config(
-    cloud_name=config('cloud_name', default='fallback-cloud-name'),  # Replace with your Cloudinary Cloud Name
-    api_key=config('api_key', default='fallback-api-key'),  # Replace with your API Key
-    api_secret=config('api_secret', default='fallback-api-secret')  # Replace with your API Secret
+    cloud_name=config('cloud_name', None),  # Replace with your Cloudinary Cloud Name
+    api_key=config('api_key', None),  # Replace with your API Key
+    api_secret=config('api_secret', None)  # Replace with your API Secret
 )
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('cloud_name', default='fallback-cloud-name'),
-    'API_KEY': config('api_key', default='fallback-api-key'),
-    'API_SECRET': config('api_secret', default='fallback-api-secret'),
+    'CLOUD_NAME': config('cloud_name', None),
+    'API_KEY': config('api_key', None),
+    'API_SECRET': config('api_secret', None),
 }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'

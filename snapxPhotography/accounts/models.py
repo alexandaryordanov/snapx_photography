@@ -21,8 +21,12 @@ class MyAppUser(AbstractBaseUser, PermissionsMixin):
 
     objects = MyAppUserManager()
 
+    def __str__(self):
+        return self.username
+
     class Meta:
         verbose_name = 'Account'
+        verbose_name_plural = 'Accounts'
 
 
 UserModel = get_user_model()
@@ -93,4 +97,4 @@ class Account(models.Model):
     )
 
     def __str__(self):
-        return self.first_name + ' ' + self.last_name
+        return f"{self.first_name} {self.last_name}"

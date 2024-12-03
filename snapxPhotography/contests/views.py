@@ -1,8 +1,8 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.paginator import Paginator
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
+from django.views.generic import CreateView, ListView, DeleteView, DetailView
 
 from snapxPhotography.common.forms import SearchForm
 from snapxPhotography.contests.forms import ContestAddForm, ContestDeleteForm
@@ -83,6 +83,7 @@ class ContestDetailsView(LoginRequiredMixin, DetailView):
             contex['photos'] = photos
 
         return contex
+
 
 class ContestDeletePageView(UserPassesTestMixin, DeleteView):
     model = Contest
