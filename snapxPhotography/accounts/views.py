@@ -3,13 +3,17 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.views import LoginView
 from django.core.exceptions import PermissionDenied
 from django.core.paginator import Paginator
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
+from rest_framework import status
 
 from snapxPhotography.accounts.forms import MyAppUserCreationForm, AccountEditForm
 from snapxPhotography.accounts.models import Account
+from snapxPhotography.common.forms import ContactForm
+from snapxPhotography.common.utils import EmailThread
 from snapxPhotography.contests.models import Contest
 from snapxPhotography.photos.models import Photo
 
@@ -44,13 +48,13 @@ class AccountDetailView(LoginRequiredMixin, DetailView):
     template_name = 'accounts/account_details.html'
 
     def get_context_data(self, **kwargs):
-        contex = super().get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         photos_list = self.object.user.photos.all()
         if photos_list:
             paginator = Paginator(photos_list, 12)
             page_number = self.request.GET.get('page')
             photos = paginator.get_page(page_number)
-            contex['photos'] = photos
+            context['photos'] = photos
         closed_contests = Contest.objects.filter(deadline__lt=timezone.now().date())
         contest_winners = []
         total_earned = 0
@@ -61,12 +65,13 @@ class AccountDetailView(LoginRequiredMixin, DetailView):
             if photo in contest_winners:
                 total_earned += photo.contest.award
                 contest_won += 1
-        contex['total_earned'] = total_earned
-        contex['contest_won'] = contest_won
-        contex['total_contests'] = Contest.objects.count()
-        contex['total_photos'] = Photo.objects.count()
-        contex['total_closed'] = len(closed_contests)
-        return contex
+        context['total_earned'] = total_earned
+        context['contest_won'] = contest_won
+        context['total_contests'] = Contest.objects.count()
+        context['total_photos'] = Photo.objects.count()
+        context['total_closed'] = len(closed_contests)
+        context['form'] = ContactForm()
+        return context
 
     def get_object(self, queryset=None):
         obj = super().get_object(queryset)
@@ -74,6 +79,26 @@ class AccountDetailView(LoginRequiredMixin, DetailView):
             raise PermissionDenied("You are not allowed to view this page.")
 
         return obj
+
+    def post(self, request, *args, **kwargs):
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            sender_email = form.cleaned_data['email']
+            phone = form.cleaned_data['telephone']
+
+            # Asynchronous email sending
+            email_subject = f"{subject}"
+            email_body = f"User with email:{sender_email} and tel: {phone} sends you this Message: \n\n {message}"
+            from_email = 'anonimovbg@gmail.com'
+            recipient_list = [f'{self.get_object().user.email}']
+
+            EmailThread(email_subject, email_body, from_email, recipient_list).start()
+
+            return JsonResponse({'message': 'Your message has been sent successfully!'}, status=status.HTTP_200_OK)
+        else:
+            return JsonResponse({'errors': form.errors}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class AccountEditView(UserPassesTestMixin, UpdateView):

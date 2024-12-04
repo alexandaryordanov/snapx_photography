@@ -69,7 +69,7 @@
             </div>
         </div>
     </div>
-    
+
     {% include 'common/gallery_photo.html' %}
 
     <section class="contact-us">
@@ -102,35 +102,32 @@
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <form id="contact" action="" method="post">
+                    <form id="contact" action="." method="post" novalidate>
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <input type="text" name="name" id="name" placeholder="Your Name..."
-                                           autocomplete="on" required>
+                                    {{ form.name }}
                                 </fieldset>
                             </div>
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <input type="text" name="telephone" id="telephone" placeholder="Your Telephone..."
-                                           autocomplete="on" required>
+                                    {{ form.telephone }}
                                 </fieldset>
                             </div>
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <input type="email" name="email" id="email" placeholder="Your E-mail..."
-                                           required="">
+                                    {{ form.email }}
                                 </fieldset>
                             </div>
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <input type="text" name="subject" id="subject" placeholder="Subject..."
-                                           autocomplete="on">
+                                    {{ form.subject }}
                                 </fieldset>
                             </div>
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                                    {{ form.message }}
                                 </fieldset>
                             </div>
                             <div class="col-lg-12">
@@ -141,6 +138,7 @@
                             </div>
                         </div>
                     </form>
+                    <div id="responseMessage" class="mt-3"></div>
                 </div>
             </div>
         </div>

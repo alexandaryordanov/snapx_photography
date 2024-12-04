@@ -96,3 +96,29 @@ voteButtons.forEach(button => {
         });
     });
 });
+
+$(document).ready(function () {
+        $('#contact').on('submit', function (e) {
+            e.preventDefault();
+            const formData = $(this).serialize();
+
+            $.ajax({
+                url: $(this).attr('action'),
+                method: 'POST',
+                data: formData,
+                success: function (data) {
+                    $('#responseMessage').html(`<div class="alert alert-success">${data.message}</div>`);
+                    $('#contactForm')[0].reset();
+                },
+                error: function (xhr) {
+                    const errors = xhr.responseJSON.errors;
+                    let errorMessage = '<ul>';
+                    for (const [field, messages] of Object.entries(errors)) {
+                        messages.forEach(msg => errorMessage += `<li>${msg}</li>`);
+                    }
+                    errorMessage += '</ul>';
+                    $('#responseMessage').html(`<div class="alert alert-danger">${errorMessage}</div>`);
+                }
+            });
+        });
+    });
