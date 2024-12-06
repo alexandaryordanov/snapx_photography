@@ -1,3 +1,4 @@
+from django.db.models import Count
 from django.utils import timezone
 from django.views.generic import ListView
 
@@ -10,4 +11,5 @@ class IndexView(ListView):
     template_name = 'common/index.html'
 
     def get_queryset(self):
-        return Contest.objects.filter(deadline__lt=timezone.now().date())[:10]
+        queryset = Contest.objects.annotate(count_photos=Count('photo')).filter(deadline__lt=timezone.now().date()).order_by('-count_photos')[:10]
+        return queryset

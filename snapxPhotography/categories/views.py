@@ -1,7 +1,7 @@
-from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
-
 from snapxPhotography.categories.forms import CategoryAddForm, CategoryEditForm
 from snapxPhotography.categories.models import Category
 
@@ -26,7 +26,10 @@ class CategoryAddPageView(UserPassesTestMixin, CreateView):
         return super().form_valid(form)
 
     def test_func(self):
-        return self.request.user.is_staff
+        return self.request.user.is_authenticated and self.request.user.is_staff
+
+    def handle_no_permission(self):
+        return render(self.request, '403.html', status=403)
 
 
 class CategoryEditPageView(UserPassesTestMixin, UpdateView):
@@ -38,6 +41,9 @@ class CategoryEditPageView(UserPassesTestMixin, UpdateView):
     def test_func(self):
         return self.request.user.is_staff
 
+    def handle_no_permission(self):
+        return render(self.request, '403.html', status=403)
+
 
 class CategoryDeleteView(UserPassesTestMixin, DeleteView):
     model = Category
@@ -46,3 +52,6 @@ class CategoryDeleteView(UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         return self.request.user.is_staff
+
+    def handle_no_permission(self):
+        return render(self.request, '403.html', status=403)

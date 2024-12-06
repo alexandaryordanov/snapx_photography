@@ -1,8 +1,9 @@
-from django.contrib.auth.decorators import user_passes_test, login_required
-from django.http import request, HttpResponseForbidden
-from django.shortcuts import get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.http import HttpResponseForbidden
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
+from django.views.generic import CreateView
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -12,11 +13,10 @@ from snapxPhotography.common.models import Vote
 from snapxPhotography.contests.models import Contest
 from snapxPhotography.photos.forms import PhotoAddForm
 from snapxPhotography.photos.models import Photo
-from snapxPhotography.common.serializers import PhotoSerializer, VoteSerializer
 
 
 # Create your views here.
-class PhotoAddPageView(CreateView):
+class PhotoAddPageView(UserPassesTestMixin, CreateView):
     template_name = 'photos/add_photo.html'
     model = Photo
     form_class = PhotoAddForm
@@ -40,6 +40,12 @@ class PhotoAddPageView(CreateView):
 
     def get_success_url(self):
         return reverse_lazy('contest-details', kwargs={'pk': self.object.contest.pk})
+
+    def test_func(self):
+        return not self.request.user.is_staff
+
+    def handle_no_permission(self):
+        return render(self.request, '403.html', status=403)
 
 
 @login_required

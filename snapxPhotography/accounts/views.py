@@ -4,7 +4,7 @@ from django.contrib.auth.views import LoginView
 from django.core.exceptions import PermissionDenied
 from django.core.paginator import Paginator
 from django.http import JsonResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
@@ -88,7 +88,6 @@ class AccountDetailView(LoginRequiredMixin, DetailView):
             sender_email = form.cleaned_data['email']
             phone = form.cleaned_data['telephone']
 
-            # Asynchronous email sending
             email_subject = f"{subject}"
             email_body = f"User with email:{sender_email} and tel: {phone} sends you this Message: \n\n {message}"
             from_email = 'anonimovbg@gmail.com'
@@ -116,6 +115,9 @@ class AccountEditView(UserPassesTestMixin, UpdateView):
         account = get_object_or_404(Account, pk=self.kwargs['pk'])
         return self.request.user == account.user
 
+    def handle_no_permission(self):
+        return render(self.request, '403.html', status=403)
+
 
 class AccountDeleteView(UserPassesTestMixin, DeleteView):
     model = UserModel
@@ -125,3 +127,6 @@ class AccountDeleteView(UserPassesTestMixin, DeleteView):
     def test_func(self):
         account = get_object_or_404(Account, pk=self.kwargs['pk'])
         return self.request.user == account.user
+
+    def handle_no_permission(self):
+        return render(self.request, '403.html', status=403)

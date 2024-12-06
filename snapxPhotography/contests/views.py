@@ -1,6 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.paginator import Paginator
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, DeleteView, DetailView
 
@@ -56,7 +56,7 @@ class ContestsDashboardView(ListView):
         return queryset
 
 
-class ContestAddPageView(LoginRequiredMixin, CreateView):
+class ContestAddPageView(UserPassesTestMixin, CreateView):
     model = Contest
     form_class = ContestAddForm
     template_name = 'contests/add_contest.html'
@@ -68,6 +68,11 @@ class ContestAddPageView(LoginRequiredMixin, CreateView):
 
         return super().form_valid(form)
 
+    def test_func(self):
+        return not self.request.user.is_staff
+
+    def handle_no_permission(self):
+        return render(self.request, '403.html', status=403)
 
 class ContestDetailsView(LoginRequiredMixin, DetailView):
     model = Contest
@@ -100,3 +105,6 @@ class ContestDeletePageView(UserPassesTestMixin, DeleteView):
     def test_func(self):
         contest = get_object_or_404(Contest, pk=self.kwargs['pk'])
         return self.request.user == contest.created_by
+
+    def handle_no_permission(self):
+        return render(self.request, '403.html', status=403)

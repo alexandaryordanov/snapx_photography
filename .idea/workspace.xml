@@ -4,22 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: Fix account details template and index template and change photo gallery.">
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/accounts/migrations/0012_alter_myappuser_options.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/categories/migrations/0005_alter_category_options.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/common/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/403.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/snapxPhotography.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/snapxPhotography.iml" afterDir="false" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: add contact form to send email async on account details page and update .env file and requirements.txt">
+      <change afterPath="$PROJECT_DIR$/snapxPhotography/middlewares.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/forms/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/forms/test_category_base_form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/models/test_category_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/views/test_category_add_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/views/test_category_dashboard_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/views/test_category_delete_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/category/views/test_category_edit_view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/signals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/password_eye.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/password_eye.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/account_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/account_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/dashboard_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/dashboard_category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/common/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,34 +73,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.snapxPhotography.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tests.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/softuni/python_web/snapx_photography/snapxPhotography&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.snapxPhotography.executor": "Run",
+    "Django tests.Test: .executor": "Run",
+    "Django tests.Test: tests.accounts.views.test_account_details_view.AccountDetailViewTest.executor": "Run",
+    "Django tests.Test: tests.accounts.views.test_account_details_view.AccountDetailViewTest.test_get_account_detail_view.executor": "Run",
+    "Django tests.Test: tests.accounts.views.test_account_details_view.AccountDetailViewTest.test_get_account_detail_view_permission_denied.executor": "Run",
+    "Django tests.Test: tests.category.forms.test_category_base_form.CategoryBaseFormTest.executor": "Run",
+    "Django tests.Test: tests.category.forms.test_category_base_form.CategoryBaseFormTest.test_invalid_category_image.executor": "Run",
+    "Django tests.Test: tests.category.forms.test_category_base_form.CategoryBaseFormTest.test_no_category_image.executor": "Run",
+    "Django tests.Test: tests.category.forms.test_category_base_form.CategoryBaseFormTest.test_valid_category_image.executor": "Run",
+    "Django tests.Test: tests.category.models.test_category_model.CategoryModelTest.executor": "Run",
+    "Django tests.Test: tests.category.models.test_category_model.CategoryModelTest.test_category_creation.executor": "Run",
+    "Django tests.Test: tests.category.models.test_category_model.CategoryModelTest.test_category_image_field.executor": "Run",
+    "Django tests.Test: tests.category.models.test_category_model.CategoryModelTest.test_category_verbose_name_plural.executor": "Run",
+    "Django tests.Test: tests.category.models.test_category_model.CategoryModelTest.test_contests_open_property.executor": "Run",
+    "Django tests.Test: tests.category.models.test_category_model.CategoryModelTest.test_str_method.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_category_add_view_permission_denied.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_get_category_add_view.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_post_category_add_view_invalid.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_post_category_add_view_valid.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_template_used.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_valid_category_creation.executor": "Debug",
+    "Django tests.Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_category_dashboard_view_status_code.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_correct_template_used.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_empty_page.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_last_page_pagination.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_pagination.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_second_page_pagination.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest.test_category_delete_view_permission_denied.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest.test_template_used.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_edit_view.CategoryEditPageViewTest.executor": "Run",
+    "Django tests.Test: tests.category.views.test_category_edit_view.CategoryEditPageViewTest.test_template_used.executor": "Run",
+    "Python.tests.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/softuni/python_web/snapx_photography/snapxPhotography/tests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\tests" />
+      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\tests\category\views" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates\photos" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography" />
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\videos" />
-      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\photos" />
-      <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\snapxPhotography\contests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\softuni\python_web\snapx_photography\snapxPhotography\templates\common" />
@@ -103,7 +144,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Django Server.snapxPhotography">
-    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_template_used" type="DjangoTestsConfigurationType" temporary="true">
       <module name="snapxPhotography" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,18 +153,100 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/snapxPhotography/accounts" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/snapxPhotography/accounts/tests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="TARGET" value="tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_template_used" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_valid_category_creation" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="snapxPhotography" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_valid_category_creation" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="snapxPhotography" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest.test_template_used" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="snapxPhotography" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.category.views.test_category_delete_view.CategoryDeletePageViewTest.test_template_used" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.category.views.test_category_edit_view.CategoryEditPageViewTest.test_template_used" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="snapxPhotography" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.category.views.test_category_edit_view.CategoryEditPageViewTest.test_template_used" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
     <configuration name="snapxPhotography" type="Python.DjangoServer" factoryName="Django server">
@@ -154,11 +277,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.snapxPhotography" />
-      <item itemvalue="Python.tests" />
+      <item itemvalue="Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_template_used" />
+      <item itemvalue="Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_valid_category_creation" />
+      <item itemvalue="Django tests.Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest" />
+      <item itemvalue="Django tests.Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest.test_template_used" />
+      <item itemvalue="Django tests.Test: tests.category.views.test_category_edit_view.CategoryEditPageViewTest.test_template_used" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tests" />
+        <item itemvalue="Django tests.Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest.test_template_used" />
+        <item itemvalue="Django tests.Test: tests.category.views.test_category_edit_view.CategoryEditPageViewTest.test_template_used" />
+        <item itemvalue="Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_template_used" />
+        <item itemvalue="Django tests.Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_valid_category_creation" />
+        <item itemvalue="Django tests.Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +315,7 @@
       <workItem from="1732558953613" duration="16152000" />
       <workItem from="1732778561446" duration="11959000" />
       <workItem from="1732897395454" duration="12778000" />
-      <workItem from="1733061520332" duration="56538000" />
+      <workItem from="1733061520332" duration="97217000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -306,7 +437,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733259324441</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update: add contact form to send email async on account details page and update .env file and requirements.txt">
+      <option name="closed" value="true" />
+      <created>1733342588500</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1733342588500</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +471,8 @@
     <MESSAGE value="Update: fix Account views, fix remember me checkbox, added show hide password button." />
     <MESSAGE value="Update: Added Photo Gallery and vote button. Fixed some templates." />
     <MESSAGE value="Update: Fix account details template and index template and change photo gallery." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: Fix account details template and index template and change photo gallery." />
+    <MESSAGE value="Update: add contact form to send email async on account details page and update .env file and requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: add contact form to send email async on account details page and update .env file and requirements.txt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -344,13 +484,51 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/snapxPhotography/photos/views.py</url>
-          <line>60</line>
+          <line>66</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="DjangoTestsConfigurationType">
+        <watch expression="self.staff_user" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_add_view_CategoryAddPageViewTest_test_post_category_add_view_valid.coverage" NAME="Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_post_category_add_view_valid Coverage Results" MODIFIED="1733394195113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_edit_view_CategoryEditPageViewTest.coverage" NAME="Test: tests.category.views.test_category_edit_view.CategoryEditPageViewTest Coverage Results" MODIFIED="1733395340304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/snapxPhotography$tests.coverage" NAME="tests Coverage Results" MODIFIED="1731780177428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/snapxPhotography/accounts" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_forms_test_category_base_form_CategoryBaseFormTest_test_no_category_image.coverage" NAME="Test: tests.category.forms.test_category_base_form.CategoryBaseFormTest.test_no_category_image Coverage Results" MODIFIED="1733476199444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_dashboard_view_CategoryDashboardViewTest_test_correct_template_used.coverage" NAME="Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_correct_template_used Coverage Results" MODIFIED="1733476764349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_forms_test_category_base_form_CategoryBaseFormTest.coverage" NAME="Test: tests.category.forms.test_category_base_form.CategoryBaseFormTest Coverage Results" MODIFIED="1733395747950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_accounts_views_test_account_details_view_AccountDetailViewTest_test_get_account_detail_view_permission_denied.coverage" NAME="Test: tests.accounts.views.test_account_details_view.AccountDetailViewTest.test_get_account_detail_view_permission_denied Coverage Results" MODIFIED="1733392865252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_forms_test_category_base_form_CategoryBaseFormTest_test_invalid_category_image.coverage" NAME="Test: tests.category.forms.test_category_base_form.CategoryBaseFormTest.test_invalid_category_image Coverage Results" MODIFIED="1733395683607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_add_view_CategoryAddPageViewTest.coverage" NAME="Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest Coverage Results" MODIFIED="1733423737940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_dashboard_view_CategoryDashboardViewTest_test_category_dashboard_view_status_code.coverage" NAME="Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_category_dashboard_view_status_code Coverage Results" MODIFIED="1733476749901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_delete_view_CategoryDeletePageViewTest_test_category_delete_view_permission_denied.coverage" NAME="Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest.test_category_delete_view_permission_denied Coverage Results" MODIFIED="1733394847520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_dashboard_view_CategoryDashboardViewTest_test_second_page_pagination.coverage" NAME="Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_second_page_pagination Coverage Results" MODIFIED="1733476868933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_models_test_category_model_CategoryModelTest_test_str_method.coverage" NAME="Test: tests.category.models.test_category_model.CategoryModelTest.test_str_method Coverage Results" MODIFIED="1733396415965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_dashboard_view_CategoryDashboardViewTest.coverage" NAME="Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest Coverage Results" MODIFIED="1733477261381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_add_view_CategoryAddPageViewTest_test_category_add_view_permission_denied.coverage" NAME="Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_category_add_view_permission_denied Coverage Results" MODIFIED="1733394696673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_add_view_CategoryAddPageViewTest_test_template_used.coverage" NAME="Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_template_used Coverage Results" MODIFIED="1733491025920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_models_test_category_model_CategoryModelTest.coverage" NAME="Test: tests.category.models.test_category_model.CategoryModelTest Coverage Results" MODIFIED="1733423726016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_models_test_category_model_CategoryModelTest_test_contests_open_property.coverage" NAME="Test: tests.category.models.test_category_model.CategoryModelTest.test_contests_open_property Coverage Results" MODIFIED="1733396389259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_delete_view_CategoryDeletePageViewTest_test_template_used.coverage" NAME="Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest.test_template_used Coverage Results" MODIFIED="1733491851214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_add_view_CategoryAddPageViewTest_test_get_category_add_view.coverage" NAME="Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_get_category_add_view Coverage Results" MODIFIED="1733394327077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_delete_view_CategoryDeletePageViewTest.coverage" NAME="Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest Coverage Results" MODIFIED="1733395219067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_dashboard_view_CategoryDashboardViewTest_test_empty_page.coverage" NAME="Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_empty_page Coverage Results" MODIFIED="1733477084282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_models_test_category_model_CategoryModelTest_test_category_creation.coverage" NAME="Test: tests.category.models.test_category_model.CategoryModelTest.test_category_creation Coverage Results" MODIFIED="1733396382727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1733491486643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_accounts_views_test_account_details_view_AccountDetailViewTest.coverage" NAME="Test: tests.accounts.views.test_account_details_view.AccountDetailViewTest Coverage Results" MODIFIED="1733392777311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_models_test_category_model_CategoryModelTest_test_category_verbose_name_plural.coverage" NAME="Test: tests.category.models.test_category_model.CategoryModelTest.test_category_verbose_name_plural Coverage Results" MODIFIED="1733396488775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_models_test_category_model_CategoryModelTest_test_category_image_field.coverage" NAME="Test: tests.category.models.test_category_model.CategoryModelTest.test_category_image_field Coverage Results" MODIFIED="1733396475383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_add_view_CategoryAddPageViewTest_test_post_category_add_view_invalid.coverage" NAME="Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_post_category_add_view_invalid Coverage Results" MODIFIED="1733394508109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_edit_view_CategoryEditPageViewTest_test_template_used.coverage" NAME="Test: tests.category.views.test_category_edit_view.CategoryEditPageViewTest.test_template_used Coverage Results" MODIFIED="1733491284164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_accounts_views_test_account_details_view_AccountDetailViewTest_test_get_account_detail_view.coverage" NAME="Test: tests.accounts.views.test_account_details_view.AccountDetailViewTest.test_get_account_detail_view Coverage Results" MODIFIED="1733393129842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_add_view_CategoryAddPageViewTest_test_valid_category_creation.coverage" NAME="Test: tests.category.views.test_category_add_view.CategoryAddPageViewTest.test_valid_category_creation Coverage Results" MODIFIED="1733490243645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_dashboard_view_CategoryDashboardViewTest_test_last_page_pagination.coverage" NAME="Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_last_page_pagination Coverage Results" MODIFIED="1733476903389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_forms_test_category_base_form_CategoryBaseFormTest_test_valid_category_image.coverage" NAME="Test: tests.category.forms.test_category_base_form.CategoryBaseFormTest.test_valid_category_image Coverage Results" MODIFIED="1733395653463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_dashboard_view_CategoryDashboardViewTest_test_pagination.coverage" NAME="Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_pagination Coverage Results" MODIFIED="1733476806295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

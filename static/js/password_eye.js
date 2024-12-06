@@ -108,7 +108,7 @@ $(document).ready(function () {
                 data: formData,
                 success: function (data) {
                     $('#responseMessage').html(`<div class="alert alert-success">${data.message}</div>`);
-                    $('#contactForm')[0].reset();
+                    $('#contact')[0].reset();
                 },
                 error: function (xhr) {
                     const errors = xhr.responseJSON.errors;
