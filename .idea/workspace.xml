@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: make settings for deploy, update requirements.txt, update settings to use getenv. added async email send.">
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: update requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/validators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -295,7 +293,7 @@
       <workItem from="1732558953613" duration="16152000" />
       <workItem from="1732778561446" duration="11959000" />
       <workItem from="1732897395454" duration="12778000" />
-      <workItem from="1733061520332" duration="112665000" />
+      <workItem from="1733061520332" duration="113628000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -441,7 +439,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733607268807</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Update: update requirements.txt">
+      <option name="closed" value="true" />
+      <created>1733608412129</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1733608412129</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +468,6 @@
     <MESSAGE value="Update: refactor login and register page and update requirements.txt" />
     <MESSAGE value="Update: added category managment and patrialy contest mangement." />
     <MESSAGE value="Update: refactor contest templates and add search functionality." />
-    <MESSAGE value="Update: update requirements.txt" />
     <MESSAGE value="Update: added vote capabilities, using Django REST." />
     <MESSAGE value="Update: fix Account views, fix remember me checkbox, added show hide password button." />
     <MESSAGE value="Update: Added Photo Gallery and vote button. Fixed some templates." />
@@ -470,7 +475,8 @@
     <MESSAGE value="Update: add contact form to send email async on account details page and update .env file and requirements.txt" />
     <MESSAGE value="Update: denied staff and superusers to create contest and photo, write some integrated tests, added log funcionality" />
     <MESSAGE value="Update: make settings for deploy, update requirements.txt, update settings to use getenv. added async email send." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: make settings for deploy, update requirements.txt, update settings to use getenv. added async email send." />
+    <MESSAGE value="Update: update requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: update requirements.txt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

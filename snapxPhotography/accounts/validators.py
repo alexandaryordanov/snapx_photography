@@ -3,6 +3,11 @@ from django.utils.deconstruct import deconstructible
 
 
 @deconstructible
+class ProfileImageValidator:
+    pass
+
+
+@deconstructible
 class NameValidator:
     def __init__(self, msg=None):
         self.message = msg
