@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: denied staff and superusers to create contest and photo, write some integrated tests, added log funcionality">
-      <change afterPath="$PROJECT_DIR$/errors.log" afterDir="false" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: make settings for deploy, update requirements.txt, update settings to use getenv. added async email send.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/validators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +295,7 @@
       <workItem from="1732558953613" duration="16152000" />
       <workItem from="1732778561446" duration="11959000" />
       <workItem from="1732897395454" duration="12778000" />
-      <workItem from="1733061520332" duration="111316000" />
+      <workItem from="1733061520332" duration="112665000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -438,7 +433,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733520318686</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update: make settings for deploy, update requirements.txt, update settings to use getenv. added async email send.">
+      <option name="closed" value="true" />
+      <created>1733607268807</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1733607268807</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +469,8 @@
     <MESSAGE value="Update: Fix account details template and index template and change photo gallery." />
     <MESSAGE value="Update: add contact form to send email async on account details page and update .env file and requirements.txt" />
     <MESSAGE value="Update: denied staff and superusers to create contest and photo, write some integrated tests, added log funcionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: denied staff and superusers to create contest and photo, write some integrated tests, added log funcionality" />
+    <MESSAGE value="Update: make settings for deploy, update requirements.txt, update settings to use getenv. added async email send." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: make settings for deploy, update requirements.txt, update settings to use getenv. added async email send." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

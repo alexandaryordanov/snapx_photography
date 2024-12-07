@@ -1,23 +1,5 @@
-import magic
 from django.core.exceptions import ValidationError
 from django.utils.deconstruct import deconstructible
-
-
-@deconstructible
-class ProfileImageValidator:
-    def __init__(self, max_size=None, allowed_mime_types=None):
-        self.max_size = max_size
-        self.allowed_mime_types = allowed_mime_types or ['image/jpeg', 'image/png', 'image/gif']
-
-    def __call__(self, value):
-        if self.max_size and value.size > self.max_size:
-            raise ValidationError(f"File size exceeds {self.max_size / (1024 * 1024):.2f} MB.")
-
-        mime = magic.Magic(mime=True)
-        file_mime = mime.from_buffer(value.read(2048))
-        if file_mime not in self.allowed_mime_types:
-            raise ValidationError(
-                f"Unsupported file type. Allowed MIME types are: {', '.join(self.allowed_mime_types)}.")
 
 
 @deconstructible
