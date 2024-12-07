@@ -1,0 +1,304 @@
+ERROR 2024-12-08 00:36:29,253 log 11624 19172 Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'CloudinaryResource' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1067, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 718, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\__init__.py", line 308, in url
+    return self.build_url(**self.url_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\__init__.py", line 318, in build_url
+    return self.__build_url(**options)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\__init__.py", line 315, in __build_url
+    return utils.cloudinary_url(public_id, **combined_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\utils.py", line 839, in cloudinary_url
+    prefix = build_distribution_domain(options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\utils.py", line 748, in build_distribution_domain
+    raise ValueError("Must supply cloud_name in tag or in configuration")
+ValueError: Must supply cloud_name in tag or in configuration
+ERROR 2024-12-08 00:36:29,258 basehttp 11624 19172 "GET / HTTP/1.1" 500 215393
+WARNING 2024-12-08 00:36:29,460 log 11624 19172 Not Found: /favicon.ico
+WARNING 2024-12-08 00:36:29,460 basehttp 11624 19172 "GET /favicon.ico HTTP/1.1" 404 3077
+ERROR 2024-12-08 00:38:06,121 log 11624 3908 Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'CloudinaryResource' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1067, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 718, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\__init__.py", line 308, in url
+    return self.build_url(**self.url_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\__init__.py", line 318, in build_url
+    return self.__build_url(**options)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\__init__.py", line 315, in __build_url
+    return utils.cloudinary_url(public_id, **combined_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\utils.py", line 839, in cloudinary_url
+    prefix = build_distribution_domain(options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\utils.py", line 748, in build_distribution_domain
+    raise ValueError("Must supply cloud_name in tag or in configuration")
+ValueError: Must supply cloud_name in tag or in configuration
+ERROR 2024-12-08 00:38:06,122 basehttp 11624 3908 "GET / HTTP/1.1" 500 215393
+WARNING 2024-12-08 00:38:06,189 log 11624 3908 Not Found: /favicon.ico
+WARNING 2024-12-08 00:38:06,189 basehttp 11624 3908 "GET /favicon.ico HTTP/1.1" 404 3077
+WARNING 2024-12-08 00:38:19,780 middlewares 11624 19052 403 Forbidden: /categories/4/delete/ with method GET, user: AnonymousUser
+WARNING 2024-12-08 00:38:19,780 log 11624 19052 Forbidden: /categories/4/delete/
+WARNING 2024-12-08 00:38:19,781 basehttp 11624 19052 "GET /categories/4/delete/ HTTP/1.1" 403 4207
+ERROR 2024-12-08 00:38:23,522 log 11624 19052 Internal Server Error: /contests/
+Traceback (most recent call last):
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'CloudinaryResource' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 718, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\__init__.py", line 308, in url
+    return self.build_url(**self.url_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\__init__.py", line 318, in build_url
+    return self.__build_url(**options)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\__init__.py", line 315, in __build_url
+    return utils.cloudinary_url(public_id, **combined_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\utils.py", line 839, in cloudinary_url
+    prefix = build_distribution_domain(options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\softuni\python_web\snapx_photography\snapxPhotography\.venv\Lib\site-packages\cloudinary\utils.py", line 748, in build_distribution_domain
+    raise ValueError("Must supply cloud_name in tag or in configuration")
+ValueError: Must supply cloud_name in tag or in configuration
+ERROR 2024-12-08 00:38:23,525 basehttp 11624 19052 "GET /contests/ HTTP/1.1" 500 214399
