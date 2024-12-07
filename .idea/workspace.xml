@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: colectstatic" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: fix settings">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/errors.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -290,7 +294,7 @@
       <workItem from="1732558953613" duration="16152000" />
       <workItem from="1732778561446" duration="11959000" />
       <workItem from="1732897395454" duration="12778000" />
-      <workItem from="1733061520332" duration="116332000" />
+      <workItem from="1733061520332" duration="117684000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -468,7 +472,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733612573267</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update: delete old yaml">
+      <option name="closed" value="true" />
+      <created>1733612991009</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1733612991009</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Update: fix settings">
+      <option name="closed" value="true" />
+      <created>1733613373927</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1733613373927</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,9 +519,10 @@
     <MESSAGE value="Update: make settings for deploy, update requirements.txt, update settings to use getenv. added async email send." />
     <MESSAGE value="Update: update requirements.txt" />
     <MESSAGE value="Update: update requirements.txt and validators" />
-    <MESSAGE value="Update: fix settings" />
     <MESSAGE value="Update: colectstatic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: colectstatic" />
+    <MESSAGE value="Update: delete old yaml" />
+    <MESSAGE value="Update: fix settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: fix settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -548,7 +569,7 @@
     <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_delete_view_CategoryDeletePageViewTest.coverage" NAME="Test: tests.category.views.test_category_delete_view.CategoryDeletePageViewTest Coverage Results" MODIFIED="1733395219067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_views_test_category_dashboard_view_CategoryDashboardViewTest_test_empty_page.coverage" NAME="Test: tests.category.views.test_category_dashboard_view.CategoryDashboardViewTest.test_empty_page Coverage Results" MODIFIED="1733477084282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_models_test_category_model_CategoryModelTest_test_category_creation.coverage" NAME="Test: tests.category.models.test_category_model.CategoryModelTest.test_category_creation Coverage Results" MODIFIED="1733396382727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/snapxPhotography$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1733491486643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/snapxPhotography$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1733614241979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_accounts_views_test_account_details_view_AccountDetailViewTest.coverage" NAME="Test: tests.accounts.views.test_account_details_view.AccountDetailViewTest Coverage Results" MODIFIED="1733392777311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_models_test_category_model_CategoryModelTest_test_category_verbose_name_plural.coverage" NAME="Test: tests.category.models.test_category_model.CategoryModelTest.test_category_verbose_name_plural Coverage Results" MODIFIED="1733396488775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/snapxPhotography$Test__tests_category_models_test_category_model_CategoryModelTest_test_category_image_field.coverage" NAME="Test: tests.category.models.test_category_model.CategoryModelTest.test_category_image_field Coverage Results" MODIFIED="1733396475383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
