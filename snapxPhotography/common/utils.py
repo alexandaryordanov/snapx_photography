@@ -1,15 +1,8 @@
-import threading
-from django.core.mail import EmailMessage
+from asgiref.sync import sync_to_async
+from django.core.mail import send_mail
 
 
-class EmailThread(threading.Thread):
-    def __init__(self, subject, body, from_email, recipient_list):
-        self.subject = subject
-        self.body = body
-        self.from_email = from_email
-        self.recipient_list = recipient_list
-        threading.Thread.__init__(self)
-
-    def run(self):
-        email = EmailMessage(self.subject, self.body, self.from_email, self.recipient_list)
-        email.send()
+async def send_email_async(subject, message, recipient_list, from_email='anonimovbg@gmail.com'):
+    await sync_to_async(send_mail)(
+        subject, message, from_email, recipient_list
+    )

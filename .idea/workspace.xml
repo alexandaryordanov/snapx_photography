@@ -4,31 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: add contact form to send email async on account details page and update .env file and requirements.txt">
-      <change afterPath="$PROJECT_DIR$/snapxPhotography/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/forms/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/forms/test_category_base_form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/models/test_category_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/views/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/views/test_category_add_view.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/views/test_category_dashboard_view.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/views/test_category_delete_view.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/category/views/test_category_edit_view.py" afterDir="false" />
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: denied staff and superusers to create contest and photo, write some integrated tests, added log funcionality">
+      <change afterPath="$PROJECT_DIR$/errors.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/photos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/photos/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/password_eye.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/password_eye.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +300,7 @@
       <workItem from="1732558953613" duration="16152000" />
       <workItem from="1732778561446" duration="11959000" />
       <workItem from="1732897395454" duration="12778000" />
-      <workItem from="1733061520332" duration="97217000" />
+      <workItem from="1733061520332" duration="111316000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -445,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733342588500</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update: denied staff and superusers to create contest and photo, write some integrated tests, added log funcionality">
+      <option name="closed" value="true" />
+      <created>1733520318686</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733520318686</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +465,8 @@
     <MESSAGE value="Update: Added Photo Gallery and vote button. Fixed some templates." />
     <MESSAGE value="Update: Fix account details template and index template and change photo gallery." />
     <MESSAGE value="Update: add contact form to send email async on account details page and update .env file and requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: add contact form to send email async on account details page and update .env file and requirements.txt" />
+    <MESSAGE value="Update: denied staff and superusers to create contest and photo, write some integrated tests, added log funcionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: denied staff and superusers to create contest and photo, write some integrated tests, added log funcionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

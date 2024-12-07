@@ -31,19 +31,7 @@
   python manage.py createsuperuser
 ```
 ---
-### Направете настройката за базата данни в settings.py файла с вашите креденшъли:
-```bash
-DATABASES = {
-      "default": {
-          "ENGINE": "django.db.backends.postgresql",
-          "NAME": "your_db_name",
-          "USER": "your_username",
-          "PASSWORD": "your_pass",
-          "HOST": "127.0.0.1",
-          "PORT": "5432",
-      }
-  }
-```
+### Направете настройката за базата данни в .env файла с вашите креденшъли, база и порт:
 ---
 ### Създайте файл '.env' с данните от документа в гугъл от анкетата в Софтуни
 и го сложете в папката на проекта.

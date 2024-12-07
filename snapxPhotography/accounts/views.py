@@ -9,13 +9,14 @@ from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
 from rest_framework import status
-
 from snapxPhotography.accounts.forms import MyAppUserCreationForm, AccountEditForm
 from snapxPhotography.accounts.models import Account
 from snapxPhotography.common.forms import ContactForm
-from snapxPhotography.common.utils import EmailThread
+from snapxPhotography.common.utils import send_email_async
 from snapxPhotography.contests.models import Contest
 from snapxPhotography.photos.models import Photo
+import asyncio
+
 
 # Create your views here.
 
@@ -60,7 +61,8 @@ class AccountDetailView(LoginRequiredMixin, DetailView):
         total_earned = 0
         contest_won = 0
         for contest in closed_contests:
-            contest_winners.append(contest.photo.first())
+            if contest.photo.first():
+                contest_winners.append(contest.photo.first())
         for photo in photos_list:
             if photo in contest_winners:
                 total_earned += photo.contest.award
@@ -81,6 +83,7 @@ class AccountDetailView(LoginRequiredMixin, DetailView):
         return obj
 
     def post(self, request, *args, **kwargs):
+
         form = ContactForm(request.POST)
         if form.is_valid():
             subject = form.cleaned_data['subject']
@@ -90,10 +93,13 @@ class AccountDetailView(LoginRequiredMixin, DetailView):
 
             email_subject = f"{subject}"
             email_body = f"User with email:{sender_email} and tel: {phone} sends you this Message: \n\n {message}"
-            from_email = 'anonimovbg@gmail.com'
             recipient_list = [f'{self.get_object().user.email}']
 
-            EmailThread(email_subject, email_body, from_email, recipient_list).start()
+            asyncio.run(send_email_async(
+                subject=email_subject,
+                message=email_body,
+                recipient_list=recipient_list,
+            ))
 
             return JsonResponse({'message': 'Your message has been sent successfully!'}, status=status.HTTP_200_OK)
         else:

@@ -56,7 +56,7 @@ class ContestsDashboardView(ListView):
         return queryset
 
 
-class ContestAddPageView(UserPassesTestMixin, CreateView):
+class ContestAddPageView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Contest
     form_class = ContestAddForm
     template_name = 'contests/add_contest.html'

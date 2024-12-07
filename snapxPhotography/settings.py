@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+import os
+
 from decouple import config
 from pathlib import Path
 import cloudinary
@@ -24,12 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', None)
+SECRET_KEY = os.getenv('SECRET_KEY', config('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = os.getenv('DEBUG', config('DEBUG', cast=bool))
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', None).split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOST', config('ALLOWED_HOSTS')).split(',')
+
+CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', config('CSRF_TRUSTED_ORIGINS', [])).split(',')
 
 # Application definition
 
@@ -64,7 +68,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
 ]
 
 ROOT_URLCONF = 'snapxPhotography.urls'
@@ -94,11 +97,11 @@ WSGI_APPLICATION = 'snapxPhotography.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "snapx",
-        "USER": "postgres-user",
-        "PASSWORD": config('DATABASE_PASSWORD', None),
-        "HOST": "localhost",
-        "PORT": "5432",
+        "NAME": os.getenv('DB_NAME', config('DB_NAME')),
+        "USER": os.getenv('DB_USER', config('DB_USER')),
+        "PASSWORD": os.getenv('DB_PASSWORD', config('DB_PASSWORD')),
+        "HOST": os.getenv('DB_HOST', config('DB_HOST')),
+        "PORT": os.getenv('DB_PORT', config('DB_PORT')),
     }
 }
 
@@ -150,15 +153,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Cloudinary settings
 cloudinary.config(
-    cloud_name=config('cloud_name', None),  # Replace with your Cloudinary Cloud Name
-    api_key=config('api_key', None),  # Replace with your API Key
-    api_secret=config('api_secret', None)  # Replace with your API Secret
+    CLOUD_NAME=os.getenv('CLOUD_NAME', config('CLOUD_NAME')),
+    API_KEY=os.getenv('API_KEY', config('API_KEY')),
+    API_SECRET=os.getenv('API_SECRET', config('API_SECRET'))
 )
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('cloud_name', None),
-    'API_KEY': config('api_key', None),
-    'API_SECRET': config('api_secret', None),
+    'CLOUD_NAME': os.getenv('CLOUD_NAME', config('CLOUD_NAME')),
+    'API_KEY': os.getenv('API_KEY', config('API_KEY')),
+    'API_SECRET': os.getenv('API_SECRET', config('API_SECRET')),
 }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
@@ -183,11 +186,11 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp-relay.brevo.com'
-EMAIL_PORT = 587
+EMAIL_HOST = os.getenv('EMAIL_HOST', config('EMAIL_HOST'))
+EMAIL_PORT = os.getenv('EMAIL_PORT', config('EMAIL_PORT'))
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config('EMAIL_HOST_USER', None)
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', None)
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', config('EMAIL_HOST_USER'))
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', config('EMAIL_HOST_PASSWORD'))
 
 
 LOGGING = {
