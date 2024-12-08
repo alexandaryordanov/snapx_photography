@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: Final code review, remove unnecessary imports, add deploy to readme file.">
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Urgent Fix: Fix error 500 when Cloudinary image exist on edit.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contests/dashboard_contest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/dashboard_contest.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +294,7 @@
       <workItem from="1732558953613" duration="16152000" />
       <workItem from="1732778561446" duration="11959000" />
       <workItem from="1732897395454" duration="12778000" />
-      <workItem from="1733061520332" duration="128072000" />
+      <workItem from="1733061520332" duration="129262000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -513,7 +512,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733682727557</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Urgent Fix: Fix error 500 when Cloudinary image exist on edit.">
+      <option name="closed" value="true" />
+      <created>1733687661536</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1733687661536</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +532,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="First idea&#10;&#10;This is my first idea for my project." />
     <MESSAGE value="Update: added html and css files" />
     <MESSAGE value="Update: create urls and empty views" />
     <MESSAGE value="Update: added custom 404 website." />
@@ -550,7 +556,8 @@
     <MESSAGE value="Update: added whitenoise" />
     <MESSAGE value="Update: fix contest dashboard" />
     <MESSAGE value="Update: Final code review, remove unnecessary imports, add deploy to readme file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: Final code review, remove unnecessary imports, add deploy to readme file." />
+    <MESSAGE value="Urgent Fix: Fix error 500 when Cloudinary image exist on edit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Urgent Fix: Fix error 500 when Cloudinary image exist on edit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
