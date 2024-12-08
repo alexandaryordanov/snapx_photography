@@ -1,3 +1,4 @@
+{% load static %}
 {% if photos %}
     <div class="container mt-4">
         <h2 class="text-center mb-4">Photo <em>Gallery</em></h2>
@@ -14,7 +15,11 @@
                     {% if contest_details_page %}
                     <span>Uploaded by:</span>
                     <a href="{% url 'account-details' photo.uploaded_by.pk %}" class="d-flex align-items-center text-decoration-none">
-                        <img src="{{ photo.uploaded_by.account.profile_picture.url }}" alt="" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                        {% if  photo.uploaded_by.account.profile_picture %}
+                            <img src="{{ photo.uploaded_by.account.profile_picture.url }}" alt="" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                        {% else %}
+                            <img src="{% static 'images/user-avatar.jpg' %}" alt="" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                        {% endif %}
                         <span>{{ photo.uploaded_by.account }}</span>
                     </a>
                     {% endif %}
