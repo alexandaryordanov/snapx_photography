@@ -1,5 +1,4 @@
 from django import forms
-
 from snapxPhotography.categories.models import Category
 
 

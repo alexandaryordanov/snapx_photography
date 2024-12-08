@@ -1,12 +1,8 @@
-import datetime
-
-from cloudinary.templatetags import cloudinary
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.utils.timezone import now
-
-from snapxPhotography.accounts.models import MyAppUser, Account
+from snapxPhotography.accounts.models import Account
 
 UserModel = get_user_model()
 

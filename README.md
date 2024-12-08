@@ -53,4 +53,5 @@ python manage.py migrate
 📞 Контакт
 
     Автор: Александър Йорданов
-    Email: alexandaryordanov@abv.bg
+  Email: alexandaryordanov@abv.bg
+  WWW: [https://snapxphoto.azurewebsites.net/](https://snapxphoto.azurewebsites.net/)

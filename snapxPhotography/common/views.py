@@ -1,7 +1,6 @@
 from django.db.models import Count
 from django.utils import timezone
 from django.views.generic import ListView
-
 from snapxPhotography.contests.models import Contest
 
 

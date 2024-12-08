@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from snapxPhotography.contests.models import Contest
 
 

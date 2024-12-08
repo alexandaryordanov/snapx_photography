@@ -4,10 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: added whitenoise">
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Update: fix contest dashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contests/dashboard_contest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contests/dashboard_contest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/managers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/managers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/categories/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/categories/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/contests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/contests/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +313,7 @@
       <workItem from="1732558953613" duration="16152000" />
       <workItem from="1732778561446" duration="11959000" />
       <workItem from="1732897395454" duration="12778000" />
-      <workItem from="1733061520332" duration="120709000" />
+      <workItem from="1733061520332" duration="124816000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -496,7 +515,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733614551198</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Update: fix contest dashboard">
+      <option name="closed" value="true" />
+      <created>1733620858896</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733620858896</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +558,8 @@
     <MESSAGE value="Update: delete old yaml" />
     <MESSAGE value="Update: fix settings" />
     <MESSAGE value="Update: added whitenoise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: added whitenoise" />
+    <MESSAGE value="Update: fix contest dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: fix contest dashboard" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

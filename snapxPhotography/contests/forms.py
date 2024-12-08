@@ -1,5 +1,4 @@
 from django import forms
-
 from snapxPhotography.contests.models import Contest
 from snapxPhotography.mixins import DisabledFieldsMixin
 

@@ -1,5 +1,4 @@
 from rest_framework import serializers
-
 from snapxPhotography.common.models import Vote
 from snapxPhotography.photos.models import Photo
 

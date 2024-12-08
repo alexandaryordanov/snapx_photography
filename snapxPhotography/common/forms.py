@@ -1,5 +1,4 @@
 from django import forms
-
 from snapxPhotography.categories.models import Category
 
 
@@ -36,6 +35,7 @@ class SearchForm(forms.Form):
 
 
 class ContactForm(forms.Form):
+
     name = forms.CharField(
         max_length=100,
         required=True,
@@ -43,12 +43,14 @@ class ContactForm(forms.Form):
         'class': 'form-control',
         'placeholder': 'Your Name...'
     }))
+
     email = forms.EmailField(
         required=True,
         widget=forms.EmailInput(attrs={
         'class': 'form-control',
         'placeholder': 'Your Email...'
     }))
+
     telephone = forms.CharField(
         max_length=15,
         required=True,
@@ -56,6 +58,7 @@ class ContactForm(forms.Form):
         'class': 'form-control',
         'placeholder': 'Your Telephone...'
     }))
+
     subject = forms.CharField(
         max_length=200,
         required=False,
@@ -63,6 +66,7 @@ class ContactForm(forms.Form):
         'class': 'form-control',
         'placeholder': 'Subject...'
     }))
+
     message = forms.CharField(
         widget=forms.Textarea(attrs={
         'class': 'form-control',

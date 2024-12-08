@@ -3,7 +3,6 @@ from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, DeleteView, DetailView
-
 from snapxPhotography.common.forms import SearchForm
 from snapxPhotography.contests.forms import ContestAddForm, ContestDeleteForm
 from snapxPhotography.contests.models import Contest
