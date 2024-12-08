@@ -1,3 +1,4 @@
+from cloudinary import CloudinaryResource
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
@@ -36,6 +37,8 @@ class AccountEditForm(forms.ModelForm):
 
     def clean_profile_picture(self):
         image = self.cleaned_data.get('profile_picture')
+        if isinstance(image, CloudinaryResource):
+            return image
         if image and not image.name.lower().endswith('.jpg'):
             raise forms.ValidationError('Only .jpg files are allowed')
         return image

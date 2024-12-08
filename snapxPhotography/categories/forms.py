@@ -1,3 +1,4 @@
+from cloudinary import CloudinaryResource
 from django import forms
 from snapxPhotography.categories.models import Category
 
@@ -9,6 +10,8 @@ class CategoryBaseForm(forms.ModelForm):
 
     def clean_category_image(self):
         image = self.cleaned_data.get('category_image')
+        if isinstance(image, CloudinaryResource):
+            return image
         if image and not image.name.lower().endswith('.png'):
             raise forms.ValidationError('Only .png files are allowed')
         return image
