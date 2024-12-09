@@ -10,5 +10,5 @@ class IndexView(ListView):
     template_name = 'common/index.html'
 
     def get_queryset(self):
-        queryset = Contest.objects.annotate(count_photos=Count('photo')).filter(deadline__lt=timezone.now().date()).order_by('-count_photos')[:10]
+        queryset = Contest.objects.annotate(count_photos=Count('photo')).filter(deadline__lte=timezone.now().date()).order_by('-count_photos')[:10]
         return queryset

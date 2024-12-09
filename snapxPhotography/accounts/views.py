@@ -56,7 +56,7 @@ class AccountDetailView(LoginRequiredMixin, DetailView):
             page_number = self.request.GET.get('page')
             photos = paginator.get_page(page_number)
             context['photos'] = photos
-        closed_contests = Contest.objects.filter(deadline__lt=timezone.now().date())
+        closed_contests = Contest.objects.filter(deadline__lte=timezone.now().date())
         contest_winners = []
         total_earned = 0
         contest_won = 0
