@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Urgent Fix: Fix deadline calculations.">
+    <list default="true" id="180844fc-7f19-49ae-8254-49c3297acb8b" name="Changes" comment="Urgent Fix: Fix login and register page, if user is authenticated.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snapxPhotography/accounts/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,7 +295,7 @@
       <workItem from="1732558953613" duration="16152000" />
       <workItem from="1732778561446" duration="11959000" />
       <workItem from="1732897395454" duration="12778000" />
-      <workItem from="1733061520332" duration="132748000" />
+      <workItem from="1733061520332" duration="135948000" />
     </task>
     <task id="LOCAL-00001" summary="Update: added html and css files">
       <option name="closed" value="true" />
@@ -544,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733739032124</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Urgent Fix: Fix login and register page, if user is authenticated.">
+      <option name="closed" value="true" />
+      <created>1733846424005</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733846424005</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +565,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update: added Cloudinary and fix 404.html font" />
     <MESSAGE value="Update: extend User model and add Postgre." />
     <MESSAGE value="Update: added signal for automatic account creation." />
     <MESSAGE value="Update: refactor login and register page and update requirements.txt" />
@@ -581,7 +589,8 @@
     <MESSAGE value="Urgent Fix: Fix show static image when user does not have picture." />
     <MESSAGE value="Urgent Fix: Fix show static image when user does not have picture in photo gallery." />
     <MESSAGE value="Urgent Fix: Fix deadline calculations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Urgent Fix: Fix deadline calculations." />
+    <MESSAGE value="Urgent Fix: Fix login and register page, if user is authenticated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Urgent Fix: Fix login and register page, if user is authenticated." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
