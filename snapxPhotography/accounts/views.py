@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.views import LoginView
 from django.core.exceptions import PermissionDenied
@@ -7,6 +8,7 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
 from django.utils import timezone
+from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
 from rest_framework import status
 from snapxPhotography.accounts.forms import MyAppUserCreationForm, AccountEditForm
@@ -16,7 +18,6 @@ from snapxPhotography.common.utils import send_email_async
 from snapxPhotography.contests.models import Contest
 from snapxPhotography.photos.models import Photo
 import asyncio
-
 
 # Create your views here.
 
@@ -36,12 +37,20 @@ class AccountLoginView(LoginView):
 
         return super().form_valid(form)
 
+    @method_decorator(user_passes_test(lambda user: not user.is_authenticated, login_url='/'))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
 
 class AccountRegisterView(CreateView):
     model = UserModel
     form_class = MyAppUserCreationForm
     template_name = 'accounts/register_page.html'
     success_url = reverse_lazy('login')
+
+    @method_decorator(user_passes_test(lambda user: not user.is_authenticated, login_url='/'))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
 
 
 class AccountDetailView(LoginRequiredMixin, DetailView):
