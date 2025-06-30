@@ -53,5 +53,5 @@ python manage.py migrate
 📞 Контакт
 
     Автор: Александър Йорданов
-  Email: alexandaryordanov@abv.bg
+  Email: alexandaryordanov@outlook.com
   WWW: -
